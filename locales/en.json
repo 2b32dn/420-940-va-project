@@ -1,0 +1,12 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.menu": "Menu",
+  "nav.contact": "Contact",
+  "home.title": "Welcome to our website!",
+  "home.description": "This is a simple internationalization test.",
+  "about.title": "About Us",
+  "about.description": "We are a company that values diversity and inclusion.",
+  "contact.title": "Contact Us",
+  "contact.description": "Feel free to reach out to us anytime!"
+}

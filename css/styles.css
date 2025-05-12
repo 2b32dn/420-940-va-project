@@ -1,8 +1,9 @@
 @import url(./header.css);
-@import url(./main.css);
 @import url(./footer.css);
 
 :root {
+  --mrn-brown-main: #5e1b12;
+  --mrn-yellow-main: #cd9b2c;
 }
 
 * {
@@ -68,7 +69,7 @@ figcaption {
 
 /* Layout */
 
-.grid-container {
+.mrn-l-grid-container {
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
