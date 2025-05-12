@@ -1,0 +1,25 @@
+.mrn-c-header {
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--mrn-yellow-main);
+}
+
+.mrn-c-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mrn-c-logo {
+  flex: 1;
+}
+
+.mrn-c-image {
+  width: 50px;
+}
+
+.mrn-c-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
