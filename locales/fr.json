@@ -1,0 +1,12 @@
+{
+  "nav.home": "Accueil",
+  "nav.about": "À propos",
+  "nav.menu": "Menu",
+  "nav.contact": "Contact",
+  "home.title": "Bienvenue sur notre site web !",
+  "home.description": "Ceci est un test simple d'internationalisation.",
+  "about.title": "À propos de nous",
+  "about.description": "Nous sommes une entreprise qui valorise la diversité et l'inclusion.",
+  "contact.title": "Contactez-nous",
+  "contact.description": "N'hésitez pas à nous contacter à tout moment !"
+}
