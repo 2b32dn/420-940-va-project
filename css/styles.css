@@ -4,6 +4,13 @@
 :root {
   --mrn-brown-main: #5e1b12;
   --mrn-yellow-main: #cd9b2c;
+
+  /* Breakpoints */
+  --sm: 540px;
+  --md: 720px;
+  --lg: 960px;
+  --xl: 1140px;
+  --xxl: 1320px;
 }
 
 * {
@@ -73,4 +80,42 @@ figcaption {
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+}
+
+.mrn-l-container {
+  width: 100%;
+  padding-right: calc(1.5rem * 0.5);
+  padding-left: calc(1.5rem * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .mrn-l-container {
+    max-width: var(--sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .mrn-l-container {
+    max-width: var(--md);
+  }
+}
+
+@media (min-width: 992px) {
+  .mrn-l-container {
+    max-width: var(--lg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrn-l-container {
+    max-width: var(--xl);
+  }
+}
+
+@media (min-width: 1400px) {
+  .mrn-l-container {
+    max-width: var(--xxl);
+  }
 }
