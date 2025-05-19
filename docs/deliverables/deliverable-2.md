@@ -65,26 +65,25 @@ As a developer, I want to receive error notifications if the website goes offlin
 
 3. Team Logbook:
 
-Date
-Activity
-Team Members
-Notes
-Next Steps
 2025/05/05
 First Client Interview
 Dickson, Thuson
 Meeting the client for the first time
 Get the client to be involved in the creative process of the project
+
 2025/05/08
 Team Meeting
 All members
 Worked on the deliverable, discussed the client needs and next steps
 Start creating Jira tickets
+
 2025/05/09
 Team Meeting
 Some members
 Fixed some issues
 Submit project deliverable
+
+
 
 
 

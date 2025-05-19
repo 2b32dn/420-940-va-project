@@ -1,25 +1,48 @@
 .mrn-c-header {
   align-items: center;
-  padding: 1rem;
   background-color: var(--mrn-yellow-main);
 }
 
 .mrn-c-nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
-.mrn-c-logo {
-  flex: 1;
+.mrn-c-nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.mrn-c-image {
-  width: 50px;
+.mrn-c-nav__group {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+  width: auto;
 }
 
 .mrn-c-nav__list {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
+}
+
+.mrn-c-logo {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.mrn-c-image {
+  width: 150px;
+}
+
+.mrn-c-nav__link {
+  color: black;
+  font-weight: bold;
+}
+
+.mrn-c-nav__language-selector {
+  margin-right: 16px;
 }
