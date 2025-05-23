@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .mrn-c-nav__group {
@@ -44,5 +45,7 @@
 }
 
 .mrn-c-nav__language-selector {
-  margin-right: 16px;
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
 }
