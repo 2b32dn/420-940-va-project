@@ -1,5 +1,6 @@
 @import url(./header.css);
 @import url(./footer.css);
+@import url(./hero.css);
 
 :root {
   --mrn-brown-main: #5e1b12;

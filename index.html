@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Morena Restaurant</title>
-  <link rel="icon" type="image/x-icon" href="./img/morenalogo.jpg">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" type="image/x-icon" href="./img/morenalogo.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
   <div class="mrn-l-grid-container">
+    
+    <!-- Header -->
     <header class="mrn-c-header" id="header" data-include="./components/header.html"></header>
+
+    <!-- Main Content -->
     <main class="mrn-l-container">
-      <section id="home">
-        <h1 data-i18n="home.title">Welcome to our website!</h1>
-        <p data-i18n="home.description">This is a simple internationalization test.</p>
-      </section>
-      <section id="about">
-        <h2 data-i18n="about.title">About Us</h2>
-        <p data-i18n="about.description">We are a company that values diversity and inclusion.</p>
-      </section>
-      <section id="contact">
-        <h2 data-i18n="contact.title">Contact Us</h2>
-        <p data-i18n="contact.description">Feel free to reach out to us anytime!</p>
-      </section>
+
+<!-- Hero Section with Bootstrap Carousel -->
+  <section id="home" class="mrn-c-hero position-relative">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+         <div class="d-block w-100 hero-slide" style="background-image: url('img/hero-banner1.jpg');"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-block w-100 hero-slide" style="background-image: url('https://via.placeholder.com/1600x600?text=Slide+2');"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-block w-100 hero-slide" style="background-image: url('https://via.placeholder.com/1600x600?text=Slide+3');"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mrn-l-container mrn-c-hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 data-i18n="home.title">Savor Authentic Filipino Flavors</h1>
+      <p data-i18n="home.description">From sizzling sisig to soulful sinigang — every dish is a celebration.</p>
+      <a href="#menu" class="mrn-c-hero-btn btn btn-primary mt-3">View Menu</a>
+    </div>
+  </section>
     </main>
+
+    <!-- Footer -->
     <footer class="mrn-c-footer" id="footer" data-include="./components/footer.html"></footer>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/includes.js"></script>
+  <!-- This script handles internationalization (i18n) by dynamically loading translations based on user preferences or browser settings -->
   <script src="./js/i18n.js"></script>
   <script>
-    includeHTML().then(() => {
-      initI18n();
-    });
+    includeHTML()
+      .then(() => {
+        initI18n();
+      })
   </script>
 </body>
-
 </html>
