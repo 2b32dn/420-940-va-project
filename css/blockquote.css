@@ -1,0 +1,123 @@
+/* ================================================
+   Blockquote Component Styles
+   ================================================ */
+
+/* Main quote container */
+.quote-highlight {
+  background-color: #fff;
+  border-left: 5px solid var(--mrn-yellow-main);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/* Blockquote element */
+.quote-highlight blockquote {
+  position: relative;
+  margin: 0;
+  padding: 0 1.5rem;
+  font-style: italic;
+}
+
+/* Decorative quote marks */
+.quote-highlight blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -0.5rem;
+  left: -0.25rem;
+  font-size: 4rem;
+  color: var(--mrn-yellow-main);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.quote-highlight blockquote::after {
+  content: "”";
+  position: absolute;
+  bottom: -2rem;
+  right: -0.25rem;
+  font-size: 4rem;
+  color: var(--mrn-yellow-main);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+/* Quote text styling */
+.quote-highlight blockquote p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Citation styling */
+.quote-highlight .blockquote-footer {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-style: normal;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.quote-highlight .blockquote-footer::before {
+  content: "— ";
+  color: var(--mrn-yellow-main);
+}
+
+/* ================================================
+   Responsive Design
+   ================================================ */
+
+@media (max-width: 768px) {
+  .quote-highlight {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .quote-highlight blockquote::before,
+  .quote-highlight blockquote::after {
+    font-size: 3rem;
+  }
+  
+  .quote-highlight blockquote p {
+    font-size: 1rem;
+  }
+}
+
+/* ================================================
+   Interactive Effects
+   ================================================ */
+
+.quote-highlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* ================================================
+   Alternative Quote Styles (Optional)
+   ================================================ */
+
+/* Centered quote variant */
+.quote-highlight.quote-centered {
+  text-align: center;
+}
+
+.quote-highlight.quote-centered .blockquote-footer {
+  text-align: center;
+}
+
+/* Minimal quote variant */
+.quote-highlight.quote-minimal {
+  background-color: transparent;
+  border-left: none;
+  box-shadow: none;
+  border-top: 2px solid var(--mrn-yellow-main);
+  border-bottom: 2px solid var(--mrn-yellow-main);
+}
