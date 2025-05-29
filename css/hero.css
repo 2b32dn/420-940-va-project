@@ -50,7 +50,21 @@
 }
 
 .hero-slide {
+  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
+  display: block;
 }
+
+  .slide-1 {
+    background-image: url('../img/hero-banner1.png');
+  }
+
+  .slide-2 {
+    background-image: url('../img/hero-banner2.png');
+  }
+
+  .slide-3 {
+    background-image: url('../img/hero-banner3.png');
+  }
