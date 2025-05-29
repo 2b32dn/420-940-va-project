@@ -88,7 +88,7 @@ figcaption {
   grid-template-rows: min-content 1fr min-content;
 }
 
-.mrn-l-container {
+/* .mrn-l-container {
   width: 100%;
   padding-right: calc(1.5rem * 0.5);
   padding-left: calc(1.5rem * 0.5);
@@ -124,7 +124,7 @@ figcaption {
   .mrn-l-container {
     max-width: var(--xxl);
   }
-}
+} */
 
 /* Utility */
 
