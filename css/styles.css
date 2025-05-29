@@ -1,10 +1,15 @@
 @import url(./header.css);
+@import url(./menu.css);
 @import url(./footer.css);
 @import url(./hero.css);
 
 :root {
   --mrn-brown-main: #5e1b12;
   --mrn-yellow-main: #cd9b2c;
+  --mrn-gray-main: #f5f5f5;
+
+  --mrn-yellow-main-svg: brightness(0) saturate(100%) invert(66%) sepia(18%)
+    saturate(1844%) hue-rotate(3deg) brightness(97%) contrast(75%);
 
   /* Breakpoints */
   --sm: 540px;
@@ -119,4 +124,14 @@ figcaption {
   .mrn-l-container {
     max-width: var(--xxl);
   }
+}
+
+/* Utility */
+
+.mrn-c-hr {
+  background-color: var(--mrn-yellow-main);
+  height: 3px;
+  border: none;
+  margin: 0;
+  opacity: 1;
 }
