@@ -1,0 +1,373 @@
+/* ================================================
+   About Page Styles - Morena Restaurant
+   ================================================ */
+
+:root {
+  --primary-color: #d4a574;
+  --secondary-color: #8b4513;
+  --accent-color: #f4e4bc;
+  --text-dark: #2c1810;
+  --text-light: #6b5b47;
+  --background-light: #faf8f3;
+  --white: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+/* ================================================
+   Global Styles
+   ================================================ */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+}
+
+/* ================================================
+   Hero Section
+   ================================================ */
+
+.mrn-c-hero-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mrn-c-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  opacity: 0.3;
+}
+
+.mrn-c-hero-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.mrn-c-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mrn-c-hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+/* ================================================
+   Main Content
+   ================================================ */
+
+.mrn-c-about-content {
+  background-color: var(--white);
+}
+
+.mrn-c-section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.mrn-c-section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.mrn-c-story-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* ================================================
+   Story Sections
+   ================================================ */
+
+.mrn-c-story-section {
+  padding: 3rem 0;
+}
+
+.mrn-c-story-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.mrn-c-story-icon i {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.mrn-c-story-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.mrn-c-image-placeholder {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  transition: transform 0.3s ease;
+}
+
+.mrn-c-image-placeholder:hover {
+  transform: translateY(-5px);
+}
+
+.mrn-c-image-placeholder i {
+  font-size: 4rem;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+/* ================================================
+   Values Section
+   ================================================ */
+
+.mrn-c-values-section {
+  background-color: var(--background-light);
+  border-radius: 2rem;
+  margin: 3rem 0;
+}
+
+.mrn-c-value-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 5px 20px var(--shadow-light);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 165, 116, 0.1);
+}
+
+.mrn-c-value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+.mrn-c-value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.mrn-c-value-icon i {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.mrn-c-value-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.mrn-c-value-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* ================================================
+   Closing Section
+   ================================================ */
+
+.mrn-c-closing-section {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  border-radius: 2rem;
+  margin: 3rem 0;
+}
+
+.mrn-c-closing-card {
+  padding: 2rem;
+  position: relative;
+}
+
+.mrn-c-closing-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.mrn-c-closing-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.mrn-c-closing-accent {
+  width: 60px;
+  height: 4px;
+  background: var(--secondary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ================================================
+   Responsive Design
+   ================================================ */
+
+@media (max-width: 768px) {
+  .mrn-c-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .mrn-c-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .mrn-c-section-title {
+    font-size: 2rem;
+  }
+
+  .mrn-c-story-section {
+    padding: 2rem 0;
+  }
+
+  .mrn-c-story-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mrn-c-story-icon i {
+    font-size: 1.5rem;
+  }
+
+  .mrn-c-story-image {
+    height: 250px;
+    margin-top: 2rem;
+  }
+
+  .mrn-c-value-card {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mrn-c-value-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mrn-c-value-icon i {
+    font-size: 1.25rem;
+  }
+
+  .mrn-c-closing-title {
+    font-size: 2rem;
+  }
+
+  .mrn-c-closing-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .mrn-c-hero-section {
+    padding: 60px 0;
+  }
+
+  .mrn-c-hero-title {
+    font-size: 2rem;
+  }
+
+  .mrn-c-values-section,
+  .mrn-c-closing-section {
+    margin: 2rem 0;
+    border-radius: 1rem;
+  }
+
+  .mrn-c-story-text {
+    font-size: 1rem;
+  }
+
+  .mrn-c-value-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* ================================================
+   Animation and Transitions
+   ================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mrn-c-story-section,
+.mrn-c-value-card,
+.mrn-c-closing-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.mrn-c-value-card:nth-child(1) { animation-delay: 0.1s; }
+.mrn-c-value-card:nth-child(2) { animation-delay: 0.2s; }
+.mrn-c-value-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ================================================
+   Layout Utilities
+   ================================================ */
+
+.mrn-l-container {
+  width: 100%;
+  max-width: var(--xxl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mrn-c-image-placeholder {
+    max-width: 90%;
+  }
+}
