@@ -10,9 +10,8 @@
     opacity: 0;
     margin: 0 auto 2rem;
     border-radius: 2px;
-    /* Add these for animation */
     transform: scaleX(0);
-    transform-origin: center;  /* or center, left looks better for "growing" */
+    transform-origin: center;  
     transition: transform 1s ease, opacity 1s ease;
 }
 
