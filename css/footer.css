@@ -1,0 +1,16 @@
+.mrn-c-footer {
+    background-color: var(--mrn-yellow-main);
+}
+
+.mrn-c-footer-logo {
+    max-width: 120px;
+    height: auto;
+}
+
+.mrn-c-ubereats-icon {
+    height: 35px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: contain;
+}
