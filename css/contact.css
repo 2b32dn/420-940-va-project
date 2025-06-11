@@ -1,0 +1,77 @@
+.mrn-c-contact-section {
+    color: rgb(53, 53, 53);
+}
+
+/* Line Split */
+.mrn-c-contact-line {
+    height: 2px;
+    background-color: #cd9b2c;
+    width: 100%;
+    opacity: 0;
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: center;  
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.mrn-c-contact-line.visible {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* Headings */
+.mrn-c-contact-section h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: black;
+}
+
+.mrn-c-contact-section h5 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraph text */
+.mrn-c-contact-section p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Lora', serif;
+}
+
+/* Email Link */
+.mrn-c-contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Transition */
+.mrn-l-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.mrn-l-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Order Now Button */
+.mrn-c-order-button a.btn-warning {
+    border: none;
+    transition: background-color 0.6s ease;
+}
+
+.mrn-c-order-button a.btn-warning:hover {
+    background-color: #b58926;
+}
+
+/* Contact info center */
+@media (max-width: 768px) {
+    .mrn-l-contact-col {
+        text-align: center;
+    }
+}

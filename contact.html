@@ -2,38 +2,92 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Morena Restaurant</title>
-  <link rel="icon" type="image/x-icon" href="./img/morenalogo.jpg">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" type="image/x-icon" href="./img/morenalogo.jpg" />
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="mrn-l-grid-container">
-    <header class="mrn-c-header" id="header" data-include="./components/header.html"></header>
-    <main>
-      <section id="home">
-        <h1 data-i18n="home.title">Welcome to our website!</h1>
-        <p data-i18n="home.description">This is a simple internationalization test.</p>
-      </section>
-      <section id="about">
-        <h2 data-i18n="about.title">About Us</h2>
-        <p data-i18n="about.description">We are a company that values diversity and inclusion.</p>
-      </section>
-      <section id="contact">
-        <h2 data-i18n="contact.title">Contact Us</h2>
-        <p data-i18n="contact.description">Feel free to reach out to us anytime!</p>
-      </section>
-    </main>
-    <footer class="mrn-c-footer" id="footer" data-include="./components/footer.html"></footer>
-  </div>
+<div class="mrn-l-grid-container">
+
+  <header class="mrn-c-header" id="header" data-include="./components/header.html"></header>
+
+  <main class="container-fluid col-xxl-10 p-5">
+    <section class="mrn-c-contact-section">
+      <h2 class="mb-4 text-center" data-i18n="contact.title">Contact Us</h2>
+      <p class="text-center mb-5" data-i18n="contact.description">Feel free to reach out to us anytime!</p>
+      <div class="mrn-c-contact-line"></div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Contact Info -->
+        <div class="mrn-l-fade-in col-md-5 mrn-l-contact-col">
+          <div class="p-4 border rounded shadow-sm bg-light h-100">
+            <div class="mb-3">
+              <h5><i class="bi bi-geo-alt-fill me-2 text-danger"></i>Address</h5>
+              <p>6459 Victoria Ave,<br>Montreal, QC H3W 2S9</p>
+            </div>
+            <div class="mb-2">
+              <h5><i class="bi bi-telephone-fill me-2 text-primary"></i>Phone</h5>
+              <p>(514) 804-4953</p>
+            </div>
+            <div>
+              <h5><i class="bi bi-envelope-fill me-2 text-success"></i>Email</h5>
+              <p>
+                <a href="mailto:info@morenarestaurant.ca">morenarestaurant@hotmail.com</a>
+              </p>
+            </div>
+            <div class="mt-4 mrn-c-order-button">
+              <a href="https://www.ubereats.com/ca/store/morena-restaurant-%26-catering-
+                      services/mk1ZZBBKSxG84zLWjgnxWA?srsltid=AfmBOoqvQV-OcWZISEkkm30e1VZO5TD79EjNfYkzbJZ8diiImzSgBaIA" 
+                 target="_blank" 
+                 class="btn btn-warning px-4 py-2 fw-semibold">
+                Order Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="mrn-l-fade-in col-md-7">
+          <div class="ratio ratio-21x9 rounded shadow-sm h-100">
+            <iframe class="w-100 h-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.7187665419165!2d-
+              73.64264058830351!3d45.49560777095381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+              1!3m3!1m2!1s0x4cc9193874e5a437%3A0x245e261a82630f99!2sMorena%20Restaurant!5e0!3m2!1sen!2sca!4v1749153553373!5m2!1sen!2sca"
+              style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mrn-c-footer" id="footer" data-include="./components/footer.html"></footer>
+</div>
+
   <script src="./js/includes.js"></script>
   <script src="./js/i18n.js"></script>
+  <script src="./js/contact.js"></script>
   <script>
     includeHTML().then(() => {
       initI18n();
     });
+
+
   </script>
 </body>
 
