@@ -4,30 +4,999 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Morena Restaurant</title>
+  <title>Morena Restaurant (Menu)</title>
   <link rel="icon" type="image/x-icon" href="./img/morenalogo.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
   <div class="mrn-l-grid-container">
     <header class="mrn-c-header" id="header" data-include="./components/header.html"></header>
-    <main>
-      <section id="home">
-        <h1 data-i18n="home.title">Welcome to our website!</h1>
-        <p data-i18n="home.description">This is a simple internationalization test.</p>
+    <main class="mrn-c-menu container-fluid col-xxl-10 p-5">
+      <section class="mrn-c-breadcrumb-container">
+        <h1 class="mrn-c-breadcrumb__title" data-i18n="breadcrumb.nav.menu">
+          Menu
+        </h1>
+        <nav class="mrn-c-breadcrumb-nav pt-3 pb-1" aria-label="breadcrumb">
+          <ul class="breadcrumb mrn-c-breadcrumb">
+            <li class="breadcrumb-item mrn-c-breadcrumb__item">
+              <a class="mrn-c-breadcrumb__link" href="#combo" data-i18n="breadcrumb.nav.combo">
+                Combo
+              </a>
+            </li>
+            <li class="breadcrumb-item mrn-c-breadcrumb__item">
+              <a class="mrn-c-breadcrumb__link" href="#main" data-i18n="breadcrumb.nav.main">
+                Main
+              </a>
+            </li>
+            <li class="breadcrumb-item mrn-c-breadcrumb__item">
+              <a class="mrn-c-breadcrumb__link" href="#soups" data-i18n="breadcrumb.nav.soups.noodles">
+                Soups & Noodles
+              </a>
+            </li>
+            <li class="breadcrumb-item mrn-c-breadcrumb__item">
+              <a class="mrn-c-breadcrumb__link" href="#specials" data-i18n="breadcrumb.nav.specials.extras">
+                Specials & Extras
+              </a>
+            </li>
+            <li class="breadcrumb-item mrn-c-breadcrumb__item">
+              <a class="mrn-c-breadcrumb__link" href="#desserts" data-i18n="breadcrumb.nav.desserts.drinks">
+                Desserts & Drinks
+              </a>
+            </li>
+          </ul>
+        </nav>
       </section>
-      <section id="about">
-        <h2 data-i18n="about.title">About Us</h2>
-        <p data-i18n="about.description">We are a company that values diversity and inclusion.</p>
-      </section>
-      <section id="contact">
-        <h2 data-i18n="contact.title">Contact Us</h2>
-        <p data-i18n="contact.description">Feel free to reach out to us anytime!</p>
+      <hr class="mrn-c-hr">
+      <section class="container-fluid px-0 py-5">
+        <!-- Combo  -->
+        <div id="combo" class="mrn-c-menu-section">
+          <h2 class="px-3" data-i18n="menu.combo.title">
+            Combo Meals
+          </h2>
+          <div class="row">
+            <div class="col-lg-6 mt-4">
+              <article class="mrn-c-menu__item" id="menu-set-m">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/m.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.m.title">
+                    Spaghetti with two Fried Chicken pieces
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.m.desc">
+                    banana ketchup, ground beef or hotdogs, spaghetti noodles, garlic, seasoned fried chicken
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item" id="menu-set-o">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/o.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.o.title">
+                    Palabok with One Pork BBQ Skewer
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.o.desc">
+                    rice noodles, shrimp sauce (made from shrimp stock and annatto), crushed chicharrón, boiled egg,
+                    grilled pork skewer
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item" id="menu-set-r">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/r.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.r.title">
+                    Pancit with Fried Chicken & Pork BBQ Skewer
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.r.desc">
+                    bihon or canton noodles, soy sauce, vegetables (carrots, cabbage), fried chicken, pork BBQ marinade
+                    (soy sauce, sugar, garlic)
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $15.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item" id="menu-set-e">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/e.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.e.title">
+                    Rice with One Fried Chicken & Fish Fillet
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.e.desc">
+                    white rice, seasoned fried chicken, breaded fish fillet, lemon or calamansi for garnish
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $11.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item" id="menu-set-n">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/n.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.n.title">
+                    Rice with Two Fried Chicken & Pork BBQ Skewer
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.n.desc">
+                    white rice, seasoned fried chicken, pork BBQ marinade (banana ketchup, soy sauce, brown sugar,
+                    garlic)
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item" id="menu-set-a">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/a.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.a.title">
+                    Rice with Fish Fillet & Chicken BBQ
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.a.desc">
+                    white rice, chicken BBQ (marinated in calamansi, soy sauce, brown sugar), breaded fish fillet,
+                    dipping sauce
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $15.50
+                </div>
+              </article>
+              <article class="mrn-c-menu__item" id="menu-set-h">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/h.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.h.title">
+                    Rice with Pork BBQ Skewer & Chicken BBQ
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.h.desc">
+                    white rice, pork BBQ, chicken BBQ, marinade (soy sauce, vinegar, garlic, brown sugar), achuete oil
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $15.50
+                </div>
+              </article>
+              <article class="mrn-c-menu__item" id="menu-set-j">
+                <div class="mrn-c-menu__combo">
+                  <img class="mrn-c-menu-letter" src="./img/j.svg" />
+                </div>
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.combo.j.title">
+                    Rice with Chicken BBQ
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.combo.j.desc">
+                    white rice, chicken BBQ (calamansi, soy sauce, brown sugar, garlic), annatto oil for glaze
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-6 mt-4">
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-m.jpg"
+                    alt="Spaghetti with two Fried Chicken pieces" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.m.img.desc">
+                  Enjoy a comforting plate of sweet-style Filipino spaghetti paired with two crispy, golden fried
+                  chicken pieces for a hearty and nostalgic meal.
+                </p>
+              </div>
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-o.jpg" alt="Palabok with One Pork BBQ Skewer" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.o.img.desc">
+                  Savor the rich, savory flavors of palabok noodles topped with garlic and chicharrón, complemented
+                  perfectly by a tender, smoky pork BBQ skewer.
+                </p>
+              </div>
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-r.jpg"
+                    alt="Pancit with Fried Chicken and Pork BBQ Skewer" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.r.img.desc">
+                  A flavorful combo of stir-fried pancit noodles served with a crispy fried chicken piece and a
+                  succulent pork BBQ skewer for the ultimate trio of Filipino favorites.
+                </p>
+              </div>
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-e.jpg"
+                    alt="Rice with One Fried Chicken and Fish Fillet" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.e.img.desc">
+                  This satisfying dish features fluffy white rice served with a crunchy fried chicken piece and a
+                  lightly breaded, golden fish fillet for a tasty land-and-sea combo.
+                </p>
+              </div>
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-n.jpg"
+                    alt="Rice with Two Fried Chicken and Pork BBQ Skewer" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.n.img.desc">
+                  Packed with flavor, this hearty meal comes with two crispy fried chicken pieces and a smoky pork BBQ
+                  skewer, all served over a bed of rice.
+                </p>
+              </div>
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-a.jpg"
+                    alt="Rice with Fish Fillet and Chicken BBQ" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.a.img.desc">
+                  A delightful pairing of tender chicken BBQ and crispy fish fillet served over steamed rice, offering a
+                  balance of smoky, savory, and crispy textures.
+                </p>
+              </div>
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-h.jpg"
+                    alt="Rice with Pork BBQ Skewer and Chicken BBQ" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.h.img.desc">
+                  Perfectly grilled pork and chicken BBQ skewers served over rice for a smoky, savory combo that's big
+                  on flavor and satisfying to the last bite.
+                </p>
+              </div>
+              <div class="mrn-c-menu-figure-container">
+                <figure>
+                  <img class="mrn-c-menu__img" src="./img/menu/menu-set-j.jpg" alt="Rice with Chicken BBQ" />
+                </figure>
+                <p class="mrn-c-menu__text" data-i18n="menu.combo.j.img.desc">
+                  Simple yet delicious, this meal features juicy, marinated chicken BBQ served over a bed of warm,
+                  fluffy rice for a classic and comforting option.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- main -->
+        <div id="main" class="mrn-c-menu-section">
+          <h2 class="px-3" data-i18n="menu.main.title">
+            Main
+          </h2>
+          <div class="row">
+            <div class="col-lg-6 mt-4">
+              <h3 class="px-3 mb-3" data-i18n="menu.main.subtitle.1">
+                Platter
+              </h3>
+              <hr class="mrn-c-hr">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.seafood.boil.title">
+                    Seafood Boil
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.seafood.boil.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $74.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.love.platter.title">
+                    LOVE Platter
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.love.platter.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">$89.99</div>
+              </article>
+              <h3 class="px-3 mb-3" data-i18n="menu.main.subtitle.2">
+                Silog
+              </h3>
+              <hr class="mrn-c-hr">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.tapsilog.title">
+                    <em>Tapsilog</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.tapsilog.desc">
+                    beef, fried egg, garlic fried rice
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $15.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.tosilog.title">
+                    <em>Tosilog</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.tosilog.desc">
+                    pork, fried egg, garlic fried rice
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.spamsilog.title">
+                    <em>Spamsilog</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.spamsilog.desc">
+                    spam, fried egg, garlic fried rice
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.bangsilog.title">
+                    <em>Bangsilog</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.bangsilog.desc">
+                    fish, fried egg, garlic fried rice
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.cornsilog.title">
+                    <em>Cornsilog</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.cornsilog.desc">
+                    corned beef, fried egg, garlic fried rice
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <h3 class="px-3 mb-3" data-i18n="menu.main.subtitle.3">
+                PIKA-PIKA (Appetizers)
+              </h3>
+              <hr class="mrn-c-hr">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.calamari.title">
+                    Calamari
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.calamari.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.shanghai.title">
+                    <em>Shanghai (10 pcs.)</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.shanghai.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $8.50
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.siomai.title">
+                    <em>Siomai</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.siomai.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $9.50
+                </div>
+              </article>
+              <h3 class="px-3 mb-3" data-i18n="menu.main.subtitle.4">
+                Veggies
+              </h3>
+              <hr class="mrn-c-hr">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.tofu.veggies.title">
+                    Tofu Veggies
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.tofu.veggies.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $11.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.main.stirfry.veggies.title">
+                    Stirfry Veggies
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.main.stirfry.veggies.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-6 mt-4">
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Soups & Noodles -->
+        <div id="soups" class="mrn-c-menu-section">
+          <h2 class="px-3" data-i18n="menu.soups.noodles.title">
+            Soups & Noodles
+          </h2>
+          <div class="row">
+            <div class="col-lg-6 mt-4">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.pork.sinigang.title">
+                    Pork <em>Sinigang</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.pork.sinigang.desc">
+                    pork sour and savory soup
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.shrimp.sinigang.title">
+                    Shrimp <em>Sinigang</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.shrimp.sinigang.desc">
+                    shrimp sour and savory soup
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.balbacua.title">
+                    <em>Balbacua</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.balbacua.desc">
+                    beef stew
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $19.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.bulalo.title">
+                    <em>Bulalo</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.bulalo.desc">
+                    beef marrow and shanks soup
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $21.99
+                </div>
+              </article>
+              <hr class="mrn-c-hr" />
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.mami.title">
+                    <em>Mami</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.mami.desc">
+                    wheat flour noodles soup
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.miki.title">
+                    <em>Miki</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.miki.desc">
+                    egg noodles soup
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.spaghetti.title">
+                    Spaghetti
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.spaghetti.desc">
+
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.palabok.title">
+                    <em>Palabok</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.palabok.desc">
+                    starchy noodles
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.pancit.bihon.title">
+                    <em>Pancit Bihon</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.pancit.bihon.desc">
+                    rice vermicelli fried nooodles, vegetables, meat
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $11.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.pancit.canton.title">
+                    <em>Pancit Canton</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.pancit.canton.desc">
+                    thick egg noodle stir fried
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $12.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.soups.noodles.pancit.bami.title">
+                    <em>Pancit Bam-I</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.soups.noodles.pancit.bami.desc">
+                    rice and wheat stir fried noodles
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $12.99
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-6 mt-4">
+              <!-- <img src="./img/menu/menu-set-m.jpg" /> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Specials & Extras -->
+        <div id="specials" class="mrn-c-menu-section">
+          <h2 class="px-3" data-i18n="menu.specials.extras.title">
+            Specials & Extras
+          </h2>
+          <div class="row">
+            <div class="col-lg-6 mt-4">
+              <h3 class="px-3 mb-3" data-i18n="menu.specials.extras.subtitle.1">
+                Extras
+              </h3>
+              <hr class="mrn-c-hr">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.chicken.wings.title">
+                    Chicken Wings
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $8.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.baby.back.ribs.title">
+                    Baby Back Ribs
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.dinakdakan.title">
+                    <em>Dinakdakan</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.dinakdakan.desc">
+                    grilled pork head cheese, red onions, calamansi juice
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.sisig.title">
+                    <em>Sisig</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.sisig.desc">
+                    grilled pork jowl, pork belly, onions, chili peppers
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.lechon.kawali.title">
+                    <em>Lechon Kawali</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.lechon.kawali.desc">
+                    deep fried pork belly
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.dinuguan.title">
+                    <em>Dinuguan</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.dinuguan.desc">
+                    pork offal stew, chili, vinegar
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $17.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.beef.steak.title">
+                    Beef Steak
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $17.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.bicol.express.title">
+                    <em>Bicol Express</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.bicol.express.desc">
+                    pork cubes, coconut milk, chili peppers, allium stew
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.fish.fillet.title">
+                    Fish Fillet
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $10.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.sweet.sour.fish.title">
+                    Sweet and Sour Fish
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $16.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.bucket.shrimp.title">
+                    Bucket Shrimp
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $21.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.dried.dangit.title">
+                    <em>Dried Danggit</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.dried.dangit.desc">
+                    Dried Fish
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.dried.pusit.title">
+                    <em>Dried Pusit</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.dried.pusit.desc">
+                    Dried Squid
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $14.99
+                </div>
+              </article>
+              <h3 class="px-3 mb-3" data-i18n="menu.specials.extras.subtitle.2">
+                Extras
+              </h3>
+              <hr class="mrn-c-hr">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.pork.bbq.skewer.title">
+                    Pork BBQ Skewer
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $3.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.chicken.bbq.title">
+                    Chicken BBQ
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $7.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.fried.chicken.title">
+                    Fried Chicken (1 pc.)
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.fried.chicken.desc1">
+                    Less than 10: $3.00 each
+                  </p>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.fried.chicken.desc2">
+                    More than 10: $2.50 each
+                  </p>
+                </div>
+                <div class="mrn-menu__price" data-i18n="menu.specials.extras.fried.chicken.price">
+                  Varies
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.stean.rice.title">
+                    Steam Rice
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $2.50
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.pork.ribs.title">
+                    Pork Ribs
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $13.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.garlic.fried.rice.title">
+                    Garlic Fried Rice
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $7.50
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.bangus.title">
+                    <em>Bangus (1 whole pc.)</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.bangus.desc">
+                    fried whole fish
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $6.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.specials.extras.chorizo.title">
+                    Chorizo (4 pcs.)
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.specials.extras.chorizo.desc">
+                    Filipino style spicy sausage
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $6.99
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desserts & Drinks -->
+        <div id="desserts" class="mrn-c-menu-section">
+          <h2 class="px-3" data-i18n="menu.desserts.drinks.title">
+            Desserts & Drinks
+          </h2>
+          <div class="row">
+            <div class="col-lg-6 mt-4">
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.leche.flan.title">
+                    Leche Flan
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.desserts.drinks.caramel.custard.title">
+                    caramel custard
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $3.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.buko.pandan.title">
+                    <em>Buko Pandan</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.desserts.drinks.buko.pandan.desc">
+                    shredded young coconut (buko), pandan flavored jelly, sweetened cream
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $3.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.halo.halo.title">
+                    <em>Halo-Halo</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.desserts.drinks.halo.halo.desc">
+                    shaved ice, sweetened fruits, jellies and beans, coconut or evaporated milk
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $11.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.coffee.jelly.title">
+                    Coffee Jelly
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $3.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.ice.cream.title">
+                    Ice Cream
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $3.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.palamig.title">
+                    <em>Palamig</em>
+                  </h3>
+                  <p class="mrc-c-menu__desc" data-i18n="menu.desserts.drinks.palamig.desc">
+                    tapioca pearls, sweet agar-agar jelly, fruit syrups, sweetened cold flavored water
+                  </p>
+                </div>
+                <div class="mrn-menu__price">
+                  $4.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.water.bottle.title">
+                    Water Bottle
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $1.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.coffee.title">
+                    Coffee
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $1.99
+                </div>
+              </article>
+              <article class="mrn-c-menu__item">
+                <div class="mrn-c-menu__content">
+                  <h3 class="mrn-c-menu__title" data-i18n="menu.desserts.drinks.soft.drinks.title">
+                    Soft Drinks
+                  </h3>
+                </div>
+                <div class="mrn-menu__price">
+                  $1.99
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-6 mt-4">
+              <!-- <img src="./img/menu/menu-set-m.jpg" /> -->
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="mrn-c-footer" id="footer" data-include="./components/footer.html"></footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/includes.js"></script>
   <script src="./js/i18n.js"></script>
   <script>
@@ -35,6 +1004,7 @@
       initI18n();
     });
   </script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

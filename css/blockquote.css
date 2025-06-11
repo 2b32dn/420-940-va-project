@@ -1,0 +1,142 @@
+/* ================================================
+   CSS Custom Properties
+   ================================================ */
+:root {
+  --mrn-yellow-main: #f1c40f;
+}
+
+/* ================================================
+   Blockquote Component Styles (mrn-c-quote-highlight)
+   ================================================ */
+
+/* Main quote container */
+.mrn-c-quote-highlight {
+  background: #fff;
+  border-left: 5px solid var(--mrn-yellow-main);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: min(800px, 95vw);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Blockquote element */
+.mrn-c-quote-highlight blockquote {
+  position: relative;
+  margin: 0;
+  padding: 0 1.5rem;
+  font-style: italic;
+}
+
+/* Decorative quote marks - shared styles */
+.mrn-c-quote-highlight blockquote::before,
+.mrn-c-quote-highlight blockquote::after {
+  position: absolute;
+  font-size: 4rem;
+  color: var(--mrn-yellow-main);
+  font-family: Georgia, serif;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.mrn-c-quote-highlight blockquote::before {
+  content: "\"";
+  top: -0.5rem;
+  left: -0.25rem;
+}
+
+.mrn-c-quote-highlight blockquote::after {
+  content: "\"";
+  bottom: -2rem;
+  right: -0.25rem;
+}
+
+/* Quote text styling */
+.mrn-c-quote-highlight blockquote p {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+/* Citation styling */
+.mrn-c-quote-highlight .blockquote-footer {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-style: normal;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.mrn-c-quote-highlight .blockquote-footer::before {
+  content: "— ";
+  color: var(--mrn-yellow-main);
+}
+
+/* Interactive hover effect */
+.mrn-c-quote-highlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================================
+   Responsive Design
+   ================================================ */
+
+/* Small devices (up to 540px) */
+@media (max-width: 540px) {
+  .mrn-c-quote-highlight {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .mrn-c-quote-highlight blockquote {
+    padding: 0 1rem;
+  }
+  .mrn-c-quote-highlight blockquote::before,
+  .mrn-c-quote-highlight blockquote::after {
+    font-size: 2.5rem;
+  }
+  .mrn-c-quote-highlight blockquote::before {
+    top: -0.25rem;
+    left: 0;
+  }
+  .mrn-c-quote-highlight blockquote::after {
+    bottom: -1.5rem;
+    right: 0;
+  }
+  .mrn-c-quote-highlight .blockquote-footer {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Medium devices (up to 720px) */
+@media (max-width: 720px) {
+  .mrn-c-quote-highlight {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .mrn-c-quote-highlight blockquote::before,
+  .mrn-c-quote-highlight blockquote::after {
+    font-size: 3rem;
+  }
+  .mrn-c-quote-highlight blockquote::after {
+    bottom: -1.75rem;
+  }
+}
+
+/* ================================================
+   Accessibility
+   ================================================ */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .mrn-c-quote-highlight {
+    transition: none;
+  }
+  .mrn-c-quote-highlight:hover {
+    transform: none;
+  }
+}
