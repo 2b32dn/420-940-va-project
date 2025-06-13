@@ -1,58 +1,64 @@
 function initI18n() {
-  const languageSwitcher = document.getElementById("mrn-c-nav__language-select");
-  const currentLanguage = document.getElementById("current-language");
+	const languageSwitcher = document.getElementById("mrn-c-nav__language-select");
+	const currentLanguage = document.getElementById("current-language");
+	if (!languageSwitcher) {
+		console.warn("Language selector not found.");
+		return;
+	}
 
-  if (!languageSwitcher) {
-    console.warn("Language selector not found.");
-    return;
-  }
+	// 1) load translations file
+	async function loadTranslations(lang) {
+		try {
+			const resp = await fetch(`./locales/${lang}.json`);
+			const translations = await resp.json();
+			applyTranslations(translations);
+			document.documentElement.lang = lang;
+			updateLanguageLabel(lang);
+		} catch (err) {
+			console.error("Translation loading error:", err);
+		}
+	}
 
-  async function loadTranslations(lang) {
-    try {
-      const response = await fetch(`./locales/${lang}.json` || `/repo-name/locales/${lang}.json`);
-      const translations = await response.json();
-      applyTranslations(translations);
-      document.documentElement.lang = lang;
-      updateLanguageLabel(lang);
-    } catch (error) {
-      console.error("Translation loading error:", error);
-    }
-  }
+	// 2) apply text to [data-i18n] elements
+	function applyTranslations(translations) {
+		document.querySelectorAll("[data-i18n]").forEach((el) => {
+			const key = el.getAttribute("data-i18n");
+			if (translations[key]) el.textContent = translations[key];
+		});
+	}
 
-  function applyTranslations(translations) {
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const key = element.getAttribute("data-i18n");
-      if (translations[key]) {
-        element.textContent = translations[key];
-      }
-    });
-  }
+	// 3) update the little “English / Français / Tagalog” badge
+	function updateLanguageLabel(lang) {
+		const names = { en: "English", fr: "Français", tl: "Tagalog" };
+		if (currentLanguage) currentLanguage.textContent = names[lang] || lang;
+	}
 
-  function updateLanguageLabel(lang) {
-    const names = { en: "English", fr: "Français", tl: "Tagalog" };
-    if (currentLanguage) {
-      currentLanguage.textContent = names[lang] || lang;
-    }
-  }
+	// 4) detect initial language
+	function getInitialLang() {
+		const saved = localStorage.getItem("lang");
+		if (saved) return saved;
+		const browser = navigator.language.slice(0, 2);
+		return ["en", "fr", "tl"].includes(browser) ? browser : "en";
+	}
 
-  function getInitialLang() {
-    const saved = localStorage.getItem("lang");
-    if (saved) return saved;
-    const browserLang = navigator.language.slice(0, 3);
-    return ["en", "fr", "tl"].includes(browserLang) ? browserLang : "en";
-  }
+	// wire up the <select>
+	const initialLang = getInitialLang();
+	languageSwitcher.value = initialLang;
+	languageSwitcher.addEventListener("change", async (e) => {
+		const newLang = e.target.value;
+		localStorage.setItem("lang", newLang);
 
-  const initialLang = getInitialLang();
+		// reload translations…
+		await loadTranslations(newLang);
 
-  // Safely wait for selector to be present
-  if (languageSwitcher) {
-    languageSwitcher.value = initialLang;
-    languageSwitcher.addEventListener("change", (e) => {
-      const selectedLang = e.target.value;
-      localStorage.setItem("lang", selectedLang);
-      loadTranslations(selectedLang);
-    });
-  }
+		// …and rebuild the menu in that language
+		loadMenu();
+		showMenuSectionFromHash();
+	});
 
-  loadTranslations(initialLang);
+	// on first load: translations → menu → correct section
+	loadTranslations(initialLang).then(() => {
+		loadMenu();
+		showMenuSectionFromHash();
+	});
 }
