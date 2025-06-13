@@ -44,7 +44,7 @@
 
 * {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: 'Fredoka', 'Lora', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Times New Roman", Times, serif, "Open Sans",
     "Helvetica Neue", sans-serif;
 }
@@ -60,6 +60,19 @@ ul,
 p {
   padding: 0;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Fredoka', sans-serif;
+}
+
+ul,p{
+  font-family: 'Lora', serif;
 }
 
 /* Base Element Styles */
