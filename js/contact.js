@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const elementsToFade = [
-    document.querySelector(".mrn-c-contact-section h2"),
+    document.querySelector(".mrn-c-contact-section h1"),
     document.querySelector(".mrn-c-contact-section p"),
     document.querySelector(".mrn-l-contact-col"),
     document.querySelector(".mrn-c-contact-section .col-md-7")
