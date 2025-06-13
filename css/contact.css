@@ -4,11 +4,12 @@
 
 /* Line Split */
 .mrn-c-contact-line {
-    height: 2px;
+    height: 3px;
     background-color: #cd9b2c;
     width: 100%;
     opacity: 0;
     margin: 0 auto 2rem;
+    border: none;
     border-radius: 2px;
     transform: scaleX(0);
     transform-origin: center;  
