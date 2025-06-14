@@ -18,7 +18,7 @@ INSERT INTO menu_descriptions (item_id, lang_code, title, description) VALUES
 (6, 'fr', 'Riz avec filet de poisson et poulet BBQ','riz blanc, poulet BBQ (mariné dans calamansi, sauce soja, cassonade), filet de poisson pané, sauce trempette'),
 (6, 'tl', 'Kanin na may Fish Fillet at Chicken BBQ','puting kanin, chicken BBQ (minarinade sa calamansi, toyo, brown sugar), tinapay na fish fillet, sawsawan'),
 (7, 'en', 'Rice with Pork BBQ Skewer & Chicken BBQ','White rice, pork BBQ, chicken BBQ, marinade (soy sauce, vinegar, garlic, brown sugar), achuete oil'),
-(7, 'fr', 'Riz avec brochette de porc BBQ et poulet BBQ','riz blanc, porc BBQ, poulet BBQ, marinade (sauce soja, vinaigre, ail, cassonade), huile d\''achuete'),
+(7, 'fr', 'Riz avec brochette de porc BBQ et poulet BBQ','riz blanc, porc BBQ, poulet BBQ, marinade (sauce soja, vinaigre, ail, cassonade), huile d''achuete'),
 (7, 'tl', 'Kanin na may Pork BBQ Skewer at Chicken BBQ','puting kanin, pork BBQ, chicken BBQ, marinade (toyo, suka, bawang, brown sugar), achuete oil'),
 (8, 'en', 'Rice with Chicken BBQ','white rice, chicken BBQ (calamansi, soy sauce, brown sugar, garlic), annatto oil for glaze'),
 (8, 'fr', 'Riz avec poulet BBQ','riz blanc, poulet BBQ (calamansi, sauce soja, cassonade, ail), huile de rocou pour le glaçage'),
