@@ -42,6 +42,7 @@
 .mrn-c-nav__link {
   color: black;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .mrn-c-nav__language-selector {
