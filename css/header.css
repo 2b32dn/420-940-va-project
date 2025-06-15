@@ -14,12 +14,6 @@
   width: 100%;
 }
 
-.mrn-c-nav__group {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
 .mrn-c-nav__list {
   display: flex;
   align-items: center;
