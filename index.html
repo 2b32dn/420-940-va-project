@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,57 +14,125 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <div class="mrn-l-grid-container">
-
     <!-- Header -->
     <header class="mrn-c-header" id="header" data-include="./components/header.html"></header>
 
     <!-- Main Content -->
     <main>
-
-  <!-- Hero Section with Bootstrap Carousel -->
-  <section id="home" class="mrn-c-hero position-relative">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="hero-slide slide-1"></div>
+      <!-- Hero Section with Bootstrap Carousel -->
+      <section id="home" class="mrn-c-hero position-relative">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="hero-slide slide-1"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="hero-slide slide-2"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="hero-slide slide-3"></div>
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <div class="hero-slide slide-2"></div>
+
+        <div
+          class="mrn-l-container mrn-c-hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
+          <h1 data-i18n="main.hero.title">Savor Authentic Filipino Flavors</h1>
+          <p>From sizzling sisig to soulful sinigang — every dish is a celebration.</p>
+          <a href="./menu.html#combo" class="btn btn-primary">View Menu</a>
         </div>
-        <div class="carousel-item">
-          <div class="hero-slide slide-3"></div>
+      </section>
+
+      <!-- Block quote with Bootstrap -->
+      <section class="bg-light py-5 border-top border-warning-subtle">
+        <div class="mrn-l-container text-center px-4 px-md-5">
+          <div class="mrn-c-quote-highlight text-center">
+            <blockquote class="blockquote mb-4">
+              <p class="fs-4 fst-italic mb-3">
+                For I know the plans I have for you, declares the LORD, plans to prosper you and not harm you, plans to
+                give you hope and a future.
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-muted fs-6">
+              <strong>Jeremiah 29:11</strong>
+            </figcaption>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-  <div class="mrn-l-container mrn-c-hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
-    <h1 data-i18n="main.hero.title">Savor Authentic Filipino Flavors</h1>
-    <p>From sizzling sisig to soulful sinigang — every dish is a celebration.</p>
-    <a href="./menu.html#combo" class="btn btn-primary">View Menu</a>
-  </div>
-</section>
+      <!-- Snippets of menu -->
 
-<!-- Block quote with Bootstrap -->
-<section class="bg-light py-5 border-top border-warning-subtle">
-  <div class="mrn-l-container text-center px-4 px-md-5">
-    <div class="mrn-c-quote-highlight text-center">
-    <blockquote class="blockquote mb-4">
-      <p class="fs-4 fst-italic mb-3">
-        For I know the plans I have for you, declares the LORD, plans to prosper you and not harm you, plans to give you hope and a future.
-      </p>
-    </blockquote>
-    <figcaption class="blockquote-footer text-muted fs-6">
-      <strong>Jeremiah 29:11</strong>
-    </figcaption>
-  </div>
-  </div>
-</section>
+      <section class="mrn-l-section">
+        <h2 class="mrn-c-section-title text-center">Popular Dishes</h2>
 
+        <div class="mrn-l-container text-center px-4 px-md-5">
+          <div class="mrn-c-quote-highlight text-center">
+            <blockquote class="blockquote">
+              <p class="fs-6 fst-italic">
+                At the heart of our menu is a deep love for Filipino home cooking.
+                Each dish is inspired by the meals we grew up with — rich in flavor, cooked with care,
+                and meant to be shared. We focus on serving honest, satisfying food that brings people together and is
+                made to last.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="mrn-l-container text-center px-4 px-md-5">
+
+          <div class="mrn-l-grid row g-4">
+
+            <!-- Dish 1 -->
+            <div class="col-md-4">
+              <div class="mrn-c-menu-card card h-100 shadow-sm">
+                <img src="./img/menu/menu-set-r.jpg" class="card-img-top"
+                  alt="Pancit with Fried Chicken and Pork BBQ Skewer">
+                <div class="card-body">
+                  <h5 class="card-title">Pancit with Fried Chicken and Pork BBQ Skewer</h5>
+                  <p class="card-text">Stir-fried noodles loaded with vegetables, topped with crispy golden fried
+                    chicken,
+                    and paired with a smoky pork BBQ skewer glazed in sweet-savory sauce.
+                    A comforting classic that brings the party to your table.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dish 2 -->
+            <div class="col-md-4">
+              <div class="mrn-c-menu-card card h-100 shadow-sm">
+                <img src="./img/menu/tapsilog.jpg" class="card-img-top" alt="Tapsilog">
+                <div class="card-body">
+                  <h5 class="card-title">Tapsilog</h5>
+                  <p class="card-text">Tender slices of marinated beef tapa, pan-fried to savory perfection,
+                    paired with fragrant garlic fried rice and a sunny-side-up egg.
+                    Served with a side of vinegar dip for that classic tangy kick.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dish 3 -->
+            <div class="col-md-4">
+              <div class="mrn-c-menu-card card h-100 shadow-sm">
+                <img src="./img/menu/lechon-kawali.jpg" class="card-img-top" alt="Lechon Kawali">
+                <div class="card-body">
+                  <h5 class="card-title">Lechon Kawali</h5>
+                  <p class="card-text">Golden-fried pork belly with crackling skin and juicy, flavorful meat inside.
+                    Each bite delivers a satisfying crunch, balanced by our signature liver sauce and
+                    a side of pickled papaya for a burst of brightness.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="./menu.html#combo" class="mrn-c-button btn mt-4">See Full Menu</a>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -82,4 +151,5 @@
       })
   </script>
 </body>
+
 </html>
