@@ -9,46 +9,37 @@
   <link rel="icon" type="image/x-icon" href="./img/morenalogo.jpg" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 </head>
 
 <body>
   <div class="mrn-l-grid-container">
-
     <!-- Header -->
     <header class="mrn-c-header" id="header" data-include="./components/header.html"></header>
 
-    <!-- Main Content -->
+    <!-- Hero section with video -->
     <main>
-
-      <!-- Hero Section with Bootstrap Carousel -->
       <section id="home" class="mrn-c-hero position-relative">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="hero-slide slide-1"></div>
-            </div>
-            <div class="carousel-item">
-              <div class="hero-slide slide-2"></div>
-            </div>
-            <div class="carousel-item">
-              <div class="hero-slide slide-3"></div>
-            </div>
-          </div>
-        </div>
+        <video id="heroVideo" class="hero-video" autoplay muted playsinline loop poster="img/hero-banner1.png">
+          <source src="video/hero-bg.mp4" type="video/mp4" />
+          <img src="img/hero-banner-fallback.png" alt="Fallback banner" />
+        </video>
 
-        <div
-          class="mrn-l-container mrn-c-hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
-          <h1 data-i18n="main.hero.title">Savor Authentic Filipino Flavors</h1>
-          <p>From sizzling sisig to soulful sinigang — every dish is a celebration.</p>
-          <a href="./menu.html#combo" class="btn btn-primary">View Menu</a>
+        <div class="mrn-c-hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
+          <h1 data-i18n="main.hero.title">
+            Savor Authentic Filipino Flavors
+          </h1>
+          <p>
+            From sizzling sisig to soulful sinigang — every dish is a celebration.
+          </p>
+          <a href="./menu.html#combo" class="mrn-c-hero-btn">View Menu</a>
         </div>
       </section>
 
@@ -58,8 +49,9 @@
           <div class="mrn-c-quote-highlight text-center">
             <blockquote class="blockquote mb-4">
               <p class="fs-4 fst-italic mb-3">
-                For I know the plans I have for you, declares the LORD, plans to prosper you and not harm you, plans to
-                give you hope and a future.
+                For I know the plans I have for you, declares the LORD, plans
+                to prosper you and not harm you, plans to give you hope and a
+                future.
               </p>
             </blockquote>
             <figcaption class="blockquote-footer text-muted fs-6">
@@ -68,7 +60,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- Footer -->
@@ -78,13 +69,13 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/includes.js"></script>
+
   <!-- This script handles internationalization (i18n) by dynamically loading translations based on user preferences or browser settings -->
   <script src="./js/i18n.js"></script>
   <script>
-    includeHTML()
-      .then(() => {
-        initI18n();
-      })
+    includeHTML().then(() => {
+      initI18n();
+    });
   </script>
 </body>
 
