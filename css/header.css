@@ -8,31 +8,26 @@
   align-items: center;
 }
 
-.mrn-c-nav__container {
+.mrn-c-nav__center-group {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   width: 100%;
-  position: relative;
-}
-
-.mrn-c-nav__group {
-  display: flex;
-  gap: 2rem;
-  margin: 0 auto;
-  width: auto;
 }
 
 .mrn-c-nav__list {
   display: flex;
   align-items: center;
   gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
 .mrn-c-logo {
   display: flex;
   justify-content: center;
-  margin: 0px;
+  align-items: center;
 }
 
 .mrn-c-image {
@@ -42,10 +37,11 @@
 .mrn-c-nav__link {
   color: black;
   font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .mrn-c-nav__language-selector {
-  position: absolute;
-  right: 0;
-  padding-right: 1rem;
+  display: flex;
+  align-items: center;
 }
