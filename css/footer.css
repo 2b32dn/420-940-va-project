@@ -1,5 +1,6 @@
 .mrn-c-footer {
-    background-color: #5a1d14
+    background-color: #5a1d14;
+    color: white;
 }
 
 .mrn-c-footer-logo {
@@ -7,10 +8,10 @@
     height: auto;
 }
 
-.mrn-c-ubereats-icon {
-    height: 35px;
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
-    object-fit: contain;
+.mrn-c-fb-link {
+    color: white;
+}
+
+h5 {
+    color: #c69938;
 }
