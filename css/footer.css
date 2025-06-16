@@ -15,3 +15,16 @@
 h5 {
     color: #c69938;
 }
+
+i {
+    color: #c69938;
+}
+
+.mrn-c-vertical-divider {
+    border-right: 1px solid #c69938;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
