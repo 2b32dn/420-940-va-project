@@ -8,15 +8,9 @@
     height: auto;
 }
 
-.mrn-c-fb-link {
-    color: white;
-}
-
-h5 {
-    color: #c69938;
-}
-
-i {
+h5,
+i,
+.mrn-c-footer a:hover {
     color: #c69938;
 }
 
@@ -24,7 +18,6 @@ i {
     border-right: 1px solid #c69938;
 }
 
-a {
+.mrn-c-footer a {
     color: white;
-    text-decoration: underline;
 }
