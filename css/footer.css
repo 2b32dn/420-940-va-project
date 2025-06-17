@@ -1,5 +1,16 @@
 .mrn-c-footer {
-    background-color: var(--mrn-yellow-main);
+    background-color: var(--mrn-brown-main);
+    color: white;
+}
+
+.mrn-c-footer--container {
+    padding: 1rem;
+}
+
+@media all and (min-width: 992px) {
+    .mrn-c-footer--container {
+        padding: 2.5rem;
+    }
 }
 
 .mrn-c-footer-logo {
@@ -7,10 +18,59 @@
     height: auto;
 }
 
-.mrn-c-ubereats-icon {
-    height: 35px;
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
-    object-fit: contain;
+i,
+.mrn-c-footer a:hover {
+    color: var(--mrn-yellow-main);
+}
+
+.mrn-c-vertical-divider {
+    border-right: 1px solid var(--mrn-yellow-main);
+}
+
+.mrn-c-footer a {
+    color: white;
+}
+
+.mrn-c-footer__row {
+    width: 100%;
+}
+
+.mrn-c-footer__heading {
+    color: var(--mrn-yellow-main);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.mrn-c-footer__link {
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.mrn-c-footer__link:hover {
+    color: var(--mrn-yellow-main);
+}
+
+.mrn-c-footer__nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.mrn-c-footer__text {
+    font-size: 0.875rem;
+}
+
+.mrn-c-footer__icon-text {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.mrn-c-footer__icon-text .mrn-c-footer__text {
+    margin-left: 0.5rem;
+}
+
+.mrn-c-footer__link--contact {
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
 }

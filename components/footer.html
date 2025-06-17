@@ -1,42 +1,121 @@
-<footer class="mrn-c-footer py-4">
-  <div class="container">
-    <div class="row text-center text-md-start align-items-center justify-content-center">
+<div class="container-fluid col-xxl-8 mt-5 mrn-c-footer--desktop">
 
-      <!-- Column 1-->
-      <div class="col-md-4 d-flex justify-content-center mb-3 mb-md-0">
-        <img src="./img/morenalogo-removebg-preview.png" alt="Restaurant Morena Logo" class="mrn-c-footer-logo">
-      </div>
+  <!-- Bootstrap Icons and Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-      <!-- Column 2 -->
-      <div class="col-md-4 text-center">
-        <h5 class="mb-1">Restaurant Morena</h5>
-        <p class="mb-1">
-          6459 Victoria Ave | Montreal, QC<br>
-          Mon–Sun: 7 a.m.–8 p.m.
-        </p>
-        <div class="d-flex justify-content-center align-items-center gap-3">
-          <span class="me-1">Connect with us:</span>
-          <a href="https://www.facebook.com/p/Morena-Restaurant-Catering-Services-100069363169428/" target="_blank"
-            class="text-dark">
-            <i class="bi bi-facebook fs-5"></i>
+  <!-- Footer Logo -->
+  <img src="./img/newmorenalogo.png" alt="Restaurant Morena Logo" class="mrn-c-footer-logo">
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xxl-4 pb-5 mb-5 mrn-c-footer__row">
+    <!-- Column 1 -->
+    <div class="col px-4 mt-3 mrn-c-footer__column mrn-c-vertical-divider">
+      <h5 class="mrn-c-footer__heading" data-i18n="footer.location">
+        Navigation
+      </h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2 mrn-c-footer__nav-item">
+          <a href="/" data-i18n="footer.home" class="mrn-c-footer__link">
+            Home
           </a>
-          <a href="https://www.ubereats.com/ca/store/morena-restaurant-%26-catering-services/mk1ZZBBKSxG84zLWjgnxWA?srsltid=AfmBOop4q9j1oE4ic8Fo9tFksGdcwlPc33xAqVA6sxHLQX4sh2ej7juF"
-            target="_blank">
-            <img src="./img/ubereats.png" alt="Uber Eats" class="mrn-c-ubereats-icon">
+          <i class="bi bi-house"></i>
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__nav-item">
+          <a href="menu.html#combo" data-i18n="footer.menu" class="mrn-c-footer__link">
+            Menu
           </a>
-        </div>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="col-md-4 text-center mt-3 mt-md-0">
-        <p class="fst-italic small mb-0">
-          “For I know the plans I have for you, declares the LORD, plans to prosper you and not harm you, plans to give
-          you hope and a future.” – Jeremiah 29:11
-        </p>
-      </div>
+          <i class="fas fa-utensils"></i>
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__nav-item">
+          <a href="https://www.ubereats.com/ca/store/morena-restaurant-%26-catering-services/mk1ZZBBKSxG84zLWjgnxWA"
+            target="_blank" data-i18n="footer.order" class="mrn-c-footer__link">
+            Order
+          </a>
+          <i class="bi bi-cart"></i>
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__nav-item">
+          <a href="about.html" data-i18n="footer.about" class="mrn-c-footer__link">
+            About
+          </a>
+          <i class="bi bi-info-circle"></i>
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__nav-item">
+          <a href="contact.html" data-i18n="footer.contact" class="mrn-c-footer__link">
+            Contact
+          </a>
+          <i class="bi bi-chat"></i>
+        </li>
+      </ul>
     </div>
 
-    <hr class="my-3">
-    <p class="text-center small mb-0">&copy; 2025 Restaurant Morena. All rights reserved.</p>
+    <!-- Column 2 -->
+    <div class="col px-4 mt-3 mrn-c-footer__column mrn-c-vertical-divider">
+      <h5 class="mrn-c-footer__heading" data-i18n="footer.opening.hours">
+        Opening Hours
+      </h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2 mrn-c-footer__text" data-i18n="footer.opening.monday">
+          Monday: 7AM-8PM
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__text" data-i18n="footer.opening.tuesday">
+          Tuesday: 7AM-8PM
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__text" data-i18n="footer.opening.wednesday">
+          Wednesday: 7AM-8PM
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__text" data-i18n="footer.opening.thursday">
+          Thursday: 7AM-8PM
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__text" data-i18n="footer.opening.friday">
+          Friday: 7AM-8PM
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__text" data-i18n="footer.opening.saturday">
+          Saturday: 7AM-8PM
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__text" data-i18n="footer.opening.sunday">
+          Sunday: 7AM-8PM
+        </li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col px-4 mt-3 mrn-c-footer__column mrn-c-vertical-divider">
+      <h5 class="mrn-c-footer__heading" data-i18n="footer.location">
+        Location
+      </h5>
+      <p class="mrn-c-footer__text" data-i18n="footer.address">
+        6459 Victoria Ave <br>
+        Montreal, QC, H3W 2S9
+      </p>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="col px-4 mt-3 mrn-c-footer__column">
+      <h5 class="mrn-c-footer__heading" data-i18n="footer.contact">
+        Contact
+      </h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2 mrn-c-footer__icon-text">
+          <i class="bi bi-telephone-fill"></i>
+          <span class="mrn-c-footer__text">
+            (514) 804-4953
+          </span>
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__icon-text">
+          <i class="bi bi-envelope-fill"></i>
+          <span class="mrn-c-footer__text">
+            morenarestaurant@hotmail.com
+          </span>
+        </li>
+        <li class="nav-item mb-2 mrn-c-footer__icon-text">
+          <i class="bi bi-facebook fs-5"></i>
+          <a class="mrn-c-footer__link--contact"
+            href="https://www.facebook.com/p/Morena-Restaurant-Catering-Services-100069363169428/" target="_blank"
+            data-i18n="footer.restaurant.name">
+            Morena Restaurant & Catering Services
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-</footer>
+</div>
