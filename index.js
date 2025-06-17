@@ -9,9 +9,9 @@ const cors = require("cors");
 app.use(cors());
 
 const pool = new Pool({
-	user: "postgres",
+	user: "morena",
 	host: "localhost",
-	database: "morena",
+	database: "morenarestaurant",
 	password: "morenarestaurant",
 	port: 5432, // default PostgreSQL port
 });
