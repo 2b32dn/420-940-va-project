@@ -1,0 +1,66 @@
+/* =================================
+   Snippets of Menu Section
+   ================================= */
+
+.mrn-l-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.mrn-l-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mrn-l-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Section Title */
+/* .mrn-c-snippet-section-title {
+  font-size: 2rem;
+  color: var(--mrn-yellow-main); 
+  background-color: #5e1b12; 
+  padding: 0.5rem 1rem;
+} */
+
+/* Menu Cards */
+.mrn-c-menu-card {
+  transition: transform 0.3s ease;
+  border: none;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.mrn-c-menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.mrn-c-menu-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.mrn-c-menu-card .card-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--mrn-yellow-main); 
+}
+
+.mrn-c-menu-card .card-text {
+  font-size: 0.95rem;
+  color: rgb(53, 53, 53);
+}
+
+/* Button */
+.mrn-c-button{
+  border: solid;
+  border-color: var(--mrn-yellow-main); 
+  color: var(--mrn-yellow-main); 
+}
+
+.mrn-c-button:hover{
+  background-color: var(--mrn-yellow-main); 
+  color: black
+}
