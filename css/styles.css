@@ -19,15 +19,7 @@
   --mrn-gray-main: #f5f5f5;
 
   /* SVG Color Filter */
-  --mrn-yellow-main-svg: brightness(0) saturate(100%) invert(66%) sepia(18%)
-    saturate(1844%) hue-rotate(3deg) brightness(97%) contrast(75%);
-
-  /* Responsive Breakpoints */
-  --sm: 540px;
-  --md: 720px;
-  --lg: 960px;
-  --xl: 1140px;
-  --xxl: 1320px;
+  --mrn-yellow-main-svg: brightness(0) saturate(100%) invert(66%) sepia(18%) saturate(1844%) hue-rotate(3deg) brightness(97%) contrast(75%);
 }
 
 /* ================================================
@@ -44,9 +36,8 @@
 
 * {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  font-family: 'Fredoka', 'Lora', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Times New Roman", Times, serif, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "Fredoka", "Lora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Times New Roman", Times, serif, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 /* Typography Reset */
@@ -68,12 +59,13 @@ h2,
 h3,
 h4,
 h5,
-h6{
-  font-family: 'Fredoka', sans-serif;
+h6 {
+  font-family: "Fredoka", sans-serif;
 }
 
-ul,p{
-  font-family: 'Lora', serif;
+ul,
+p {
+  font-family: "Lora", serif;
 }
 
 /* Base Element Styles */
