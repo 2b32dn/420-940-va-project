@@ -486,3 +486,12 @@ async function loadDessertsDrinksMenu() {
 
 window.loadMenu = loadMenu;
 window.showMenuSectionFromHash = showMenuSectionFromHash;
+
+document.addEventListener("DOMContentLoaded", () => {
+	showMenuSectionFromHash();
+	loadMenu();
+	loadMainMenu();
+	loadSoupsNoodlesMenu();
+	loadSpecialsExtrasMenu();
+	loadDessertsDrinksMenu();
+});
