@@ -20,8 +20,7 @@
   --mrn-gray-main: #f5f5f5;
 
   /* SVG Color Filter */
-  --mrn-yellow-main-svg: brightness(0) saturate(100%) invert(66%) sepia(18%)
-    saturate(1844%) hue-rotate(3deg) brightness(97%) contrast(75%);
+  --mrn-yellow-main-svg: brightness(0) saturate(100%) invert(66%) sepia(18%) saturate(1844%) hue-rotate(3deg) brightness(97%) contrast(75%);
 
   /* Responsive Breakpoints */
   --sm: 540px;
@@ -69,11 +68,12 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   font-family: 'Fredoka', sans-serif;
 }
 
-ul,p{
+ul,
+p {
   font-family: 'Lora', serif;
 }
 
@@ -157,10 +157,33 @@ hr {
 /* ================================================
    Utility Classes
    ================================================ */
+/* hr line */
 .mrn-c-hr {
-  background-color: var(--mrn-yellow-main);
   height: 3px;
+  background-color: #cd9b2c;
+  width: 100%;
+  opacity: 0;
+  margin: 0 auto 2rem;
   border: none;
-  margin: 0;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;  
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.mrn-c-hr.visible {
   opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Transition */
+.mrn-l-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.mrn-l-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
