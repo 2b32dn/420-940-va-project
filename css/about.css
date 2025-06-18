@@ -241,14 +241,15 @@ body {
    ================================================ */
 
 .mrn-c-closing-section {
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-  border-radius: var(--border-radius-large);
   margin: 3rem 0;
 }
 
 .mrn-c-closing-card {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  border-radius: var(--border-radius-large);
   padding: 2rem;
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
 .mrn-c-closing-title {
