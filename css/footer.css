@@ -23,10 +23,6 @@ i,
     color: var(--mrn-yellow-main);
 }
 
-.mrn-c-vertical-divider {
-    border-right: 1px solid var(--mrn-yellow-main);
-}
-
 .mrn-c-footer a {
     color: white;
 }
