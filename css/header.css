@@ -36,12 +36,47 @@
 
 .mrn-c-nav__link {
   color: black;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
 }
 
+/* ================================================
+    Language Selector Styling
+================================================ */
+
 .mrn-c-nav__language-selector {
   display: flex;
   align-items: center;
+}
+
+.mrn-c-nav__language-select {
+  font-weight: 700;
+  text-transform: uppercase;
+  &,
+  &::picker(select) {
+    appearance: base-select;
+  }
+}
+
+.mrn-c-nav__language-select:hover,
+.mrn-c-nav__language-select:focus {
+  background-color: transparent;
+}
+
+.mrn-c-nav__language-select:open::picker-icon {
+  rotate: 180deg;
+}
+
+.mrn-c-nav__language-option {
+  font-weight: 500;
+  text-transform: none;
+  padding: 0.5rem;
+  width: inherit;
+}
+
+.mrn-c-nav__language-option::checkmark {
+  order: 1;
+  margin: auto;
+  content: normal;
 }
