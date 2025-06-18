@@ -868,7 +868,10 @@
   <script src="./js/i18n.js"></script>
   <script src="./js/menu.js"></script>
   <script>
-    includeHTML().then(() => {
+    document.addEventListener("DOMContentLoaded", async () => {
+      await includeHTML(); // wait for includes to finish loading
+
+      // Now it is safe to run the rest
       initI18n();
       loadMenu();
       loadMainMenu();
