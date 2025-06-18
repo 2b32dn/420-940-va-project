@@ -52,7 +52,7 @@ menuItemList.forEach((item) => {
 
 async function loadMenu() {
 	try {
-		const response = await fetch("https://www.morenarestaurant.ca/api/menu/combo");
+		const response = await fetch(`${window.location.origin}/api/menu/combo`);
 		if (!response.ok) throw new Error("Network response was not ok");
 
 		const allMenuItems = await response.json();
@@ -126,7 +126,7 @@ async function loadMenu() {
 
 async function loadMainMenu() {
 	try {
-		const response = await fetch("https://www.morenarestaurant.ca/api/menu/main");
+		const response = await fetch(`${window.location.origin}/api/menu/main`);
 		if (!response.ok) throw new Error("Network response was not ok");
 
 		const allMainMenuItems = await response.json();
@@ -274,7 +274,7 @@ async function loadMainMenu() {
 
 async function loadSoupsNoodlesMenu() {
 	try {
-		const response = await fetch("https://www.morenarestaurant.ca/api/menu/soup&noodles");
+		const response = await fetch(`${window.location.origin}/api/menu/soup&noodles`);
 		if (!response.ok) throw new Error("Network response was not ok");
 
 		const allSoupsNoodlesMenuItems = await response.json();
@@ -356,7 +356,7 @@ async function loadSoupsNoodlesMenu() {
 
 async function loadSpecialsExtrasMenu() {
 	try {
-		const response = await fetch("https://www.morenarestaurant.ca/api/menu/specials&extras");
+		const response = await fetch(`${window.location.origin}/api/menu/specials&extras`);
 		if (!response.ok) throw new Error("Network response was not ok");
 
 		const allSpecialsExtrasMenuItems = await response.json();
@@ -438,7 +438,7 @@ async function loadSpecialsExtrasMenu() {
 
 async function loadDessertsDrinksMenu() {
 	try {
-		const response = await fetch("https://www.morenarestaurant.ca/api/menu/desserts&drinks");
+		const response = await fetch(`${window.location.origin}/api/menu/desserts&drinks`);
 		if (!response.ok) throw new Error("Network response was not ok");
 
 		const allDessertsDrinksMenuItems = await response.json();
@@ -486,12 +486,3 @@ async function loadDessertsDrinksMenu() {
 
 window.loadMenu = loadMenu;
 window.showMenuSectionFromHash = showMenuSectionFromHash;
-
-document.addEventListener("DOMContentLoaded", () => {
-	showMenuSectionFromHash();
-	loadMenu();
-	loadMainMenu();
-	loadSoupsNoodlesMenu();
-	loadSpecialsExtrasMenu();
-	loadDessertsDrinksMenu();
-});
