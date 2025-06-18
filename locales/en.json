@@ -1,7 +1,8 @@
 {
   "nav.home": "Home",
-  "nav.about": "About",
   "nav.menu": "Menu",
+  "nav.order": "Order",
+  "nav.about": "About",
   "nav.contact": "Contact",
   "main.hero.title": "Savor Authentic Filipino Flavors",
   "home.title": "Morena Restaurant",
@@ -126,5 +127,22 @@
   "menu.desserts.drinks.palamig.desc": "tapioca pearls, sweet agar-agar jelly, fruit syrups, sweetened cold flavored water",
   "menu.desserts.drinks.water.bottle.title": "Water Bottle",
   "menu.desserts.drinks.coffee.title": "Coffee",
-  "menu.desserts.drinks.soft.drinks.title": "Soft Drinks"
+  "menu.desserts.drinks.soft.drinks.title": "Soft Drinks",
+  "footer.navigation": "Navigation",
+  "footer.home": "Home",
+  "footer.menu": "Menu",
+  "footer.order": "Order",
+  "footer.about": "About",
+  "footer.contact": "Contact",
+  "footer.opening.hours": "Opening Hours",
+  "footer.opening.monday": "Monday: 7AM-8PM",
+  "footer.opening.tuesday": "Tuesday: 7AM-8PM",
+  "footer.opening.wednesday": "Wednesday: 7AM-8PM",
+  "footer.opening.thursday": "Thursday: 7AM-8PM",
+  "footer.opening.friday": "Friday: 7AM-8PM",
+  "footer.opening.saturday": "Saturday: 7AM-8PM",
+  "footer.opening.sunday": "Sunday: 7AM-8PM",
+  "footer.location": "Location",
+  "footer.address": "6459 Victoria Ave Montreal, QC, H3W 2S9",
+  "footer.restaurant.name": "Morena Restaurant & Catering Services"
 }
