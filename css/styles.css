@@ -157,10 +157,21 @@ hr {
 /* ================================================
    Utility Classes
    ================================================ */
+/* hr line */
 .mrn-c-hr {
-  background-color: var(--mrn-yellow-main);
   height: 3px;
+  background-color: #cd9b2c;
+  width: 100%;
+  opacity: 0;
+  margin: 0 auto 2rem;
   border: none;
-  margin: 0;
-  opacity: 1;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;  
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.mrn-c-hr.visible {
+    opacity: 1;
+    transform: scaleX(1);
 }

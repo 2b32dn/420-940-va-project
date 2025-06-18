@@ -2,25 +2,6 @@
     color: rgb(53, 53, 53);
 }
 
-/* Line Split */
-.mrn-c-contact-line {
-    height: 3px;
-    background-color: #cd9b2c;
-    width: 100%;
-    opacity: 0;
-    margin: 0 auto 2rem;
-    border: none;
-    border-radius: 2px;
-    transform: scaleX(0);
-    transform-origin: center;  
-    transition: transform 1s ease, opacity 1s ease;
-}
-
-.mrn-c-contact-line.visible {
-    opacity: 1;
-    transform: scaleX(1);
-}
-
 /* Headings */
 .mrn-c-contact-section h1 {
     /* font-family: 'Fredoka', sans-serif; */

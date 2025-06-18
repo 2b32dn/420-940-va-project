@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const customLine = document.querySelector(".mrn-c-contact-line");
+  const customLine = document.querySelector(".mrn-c-hr");
   if (customLine) {
     setTimeout(() => {
       customLine.classList.add("visible");
@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".mrn-c-contact-section h1"),
     document.querySelector(".mrn-c-contact-section p"),
     document.querySelector(".mrn-l-contact-col"),
-    document.querySelector(".mrn-c-contact-section .col-md-7")
+    document.querySelector(".mrn-c-contact-section .col-md-7"),
+    document.querySelector(".mrn-c-breadcrumb-container"),
+    document.querySelector(".mrn-c-menu-section")
   ];
 
   elementsToFade.forEach((el, i) => {
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.add("mrn-l-fade-in");
       setTimeout(() => {
         el.classList.add("visible");
-      }, 300 * i);
+      }, 200 * i);
     }
   });
 });
