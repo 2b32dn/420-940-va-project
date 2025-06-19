@@ -159,6 +159,14 @@ hr {
    Utility Classes
    ================================================ */
 /* hr line */
+.mrn-c-hr-generic{
+  background-color: var(--mrn-yellow-main);
+  height: 3px;
+  border: none;
+  margin: 0;
+  opacity: 1;
+
+}
 .mrn-c-hr {
   height: 3px;
   background-color: var(--mrn-yellow-main);
@@ -188,3 +196,5 @@ hr {
   opacity: 1;
   transform: translateY(0);
 }
+
+
