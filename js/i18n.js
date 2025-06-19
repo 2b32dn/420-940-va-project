@@ -1,7 +1,7 @@
 function initI18n() {
-	const languageSwitcher = document.getElementById("mrn-c-nav__language-select");
+	const languageSwitchers = document.querySelectorAll(".mrn-c-nav__language-select");
 	const currentLanguage = document.getElementById("current-language");
-	if (!languageSwitcher) {
+	if (!languageSwitchers) {
 		console.warn("Language selector not found.");
 		return;
 	}
@@ -43,17 +43,21 @@ function initI18n() {
 
 	// wire up the <select>
 	const initialLang = getInitialLang();
-	languageSwitcher.value = initialLang;
-	languageSwitcher.addEventListener("change", async (e) => {
-		const newLang = e.target.value;
-		localStorage.setItem("lang", newLang);
+	languageSwitchers.value = initialLang;
 
-		// reload translations…
-		await loadTranslations(newLang);
+	languageSwitchers.forEach((switcher) => {
+		switcher.value = initialLang;
+		switcher.addEventListener("change", async (e) => {
+			const newLang = e.target.value;
+			localStorage.setItem("lang", newLang);
 
-		// …and rebuild the menu in that language
-		loadMenu();
-		showMenuSectionFromHash();
+			// Keep all dropdowns in sync
+			languageSwitchers.forEach((s) => (s.value = newLang));
+
+			await loadTranslations(newLang);
+			loadMenu();
+			showMenuSectionFromHash();
+		});
 	});
 
 	// on first load: translations → menu → correct section
