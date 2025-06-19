@@ -134,9 +134,11 @@
 
   <!-- This script handles internationalization (i18n) by dynamically loading translations based on user preferences or browser settings -->
   <script src="./js/i18n.js"></script>
+  <script src="./js/header.js"></script>
   <script>
     includeHTML().then(() => {
       initI18n();
+      initHeaderBehavior();
     });
   </script>
 </body>

@@ -1,37 +1,12 @@
 .mrn-c-header {
+  display: flex;
   align-items: center;
+  justify-content: center;
   background-color: var(--mrn-yellow-main);
-}
-
-.mrn-c-nav {
-  display: flex;
-  align-items: center;
-}
-
-.mrn-c-nav__center-group {
-  display: flex;
-  justify-content: center;
+  /* position: sticky;
+  top: 0; */
   width: 100%;
-}
-
-.mrn-c-nav__list {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-}
-
-.mrn-c-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mrn-c-image {
-  width: 150px;
+  z-index: 5;
 }
 
 .mrn-c-nav__link {
@@ -79,4 +54,213 @@
   order: 1;
   margin: auto;
   content: normal;
+}
+
+/* ================================================
+    Nav Mobile
+================================================ */
+
+.mrn-c-nav {
+  position: relative;
+  background-color: var(--mrn-yellow-main);
+  height: 15vh;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .mrn-c-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 130px 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrn-c-nav {
+    display: grid;
+    height: 200px;
+    grid-template-columns: 1fr 160px 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrn-c-nav {
+    height: 230px;
+    grid-template-columns: 1fr 225px 1fr;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mrn-c-nav {
+    height: 250px;
+    grid-template-columns: 1fr 350px 1fr;
+  }
+}
+
+.mrn-c-nav__section {
+  display: flex;
+  gap: 1rem;
+}
+
+.mrn-c-nav__section--left {
+  display: none;
+  justify-content: flex-end;
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav__section--left {
+    display: flex;
+  }
+}
+
+.mrn-c-nav__section--right {
+  justify-content: flex-start;
+}
+
+.nav-ghost-container {
+}
+
+.mrn-c-nav__logo {
+  display: none;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav__logo {
+    display: block;
+    width: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrn-c-nav__logo {
+    width: 145px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrn-c-nav__logo {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mrn-c-nav__logo {
+    width: 250px;
+  }
+}
+
+.mrn-c-nav__logo--mobile {
+  width: 100px;
+}
+
+.mrn-c-nav__section--right-mobile {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 110px;
+  padding: 1rem;
+  background-color: var(--mrn-brown-main);
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav__section--right-mobile {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    top: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.mrn-c-nav__item--right-mobile {
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav__item--right-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrn-c-nav__item--right-mobile {
+    display: none;
+  }
+}
+
+.mrn-c-nav__item--language-dropdown {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav__item--language-dropdown {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrn-c-nav__item--language-dropdown {
+    display: block;
+  }
+}
+
+.mrn-c-nav__secondary-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 1rem;
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav__secondary-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrn-c-nav__secondary-menu {
+    display: none;
+  }
+}
+
+.mrn-c--nav__btn--hamburger {
+  width: 35px;
+  height: 35px;
+  background: url("../img/hamburger.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* .mrn-c--nav__btn--hamburger.cv-nav__btn--hamburger-close {
+  background: url("../img/close.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+.mrn-c-nav__section.mrn-c-nav__section--right.mrn-c-nav__section--right-mobile {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .mrn-c-nav__section.mrn-c-nav__section--right.mrn-c-nav__section--right-mobile {
+    display: flex !important;
+  }
+}
+
+.mrn-c-nav__section.mrn-c-nav__section--right.mrn-c-nav__section--right-mobile.is-visible {
+  display: block;
 }
