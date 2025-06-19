@@ -40,6 +40,11 @@
     background-color: #b58926;
 }
 
+/* Contact Icons */
+.mrn-l-contact-icons{
+    display:flex;
+}
+
 /* Contact info center */
 @media (max-width: 768px) {
     .mrn-l-contact-col {
