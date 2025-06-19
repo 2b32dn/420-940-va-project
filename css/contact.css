@@ -4,14 +4,11 @@
 
 /* Headings */
 .mrn-c-contact-section h1 {
-    /* font-family: 'Fredoka', sans-serif; */
     font-weight: 600;
-    font-size: 2.2rem;
     color: black;
 }
 
 .mrn-c-contact-section h5 {
-    /* font-family: 'Fredoka', sans-serif; */
     font-weight: 500;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
@@ -31,13 +28,15 @@
 }
 
 /* Order Now Button */
-.mrn-c-order-button a.btn-warning {
+.mrn-c-order-button a{
     border: none;
+    background: #cd9b2c;
     transition: background-color 0.6s ease;
 }
 
-.mrn-c-order-button a.btn-warning:hover {
+.mrn-c-order-button a:hover {
     background-color: #b58926;
+    text-decoration: none;
 }
 
 /* Contact Icons */
