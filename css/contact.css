@@ -30,12 +30,12 @@
 /* Order Now Button */
 .mrn-c-order-button a{
     border: none;
-    background: #cd9b2c;
+    background-color: var(--mrn-yellow-main);
     transition: background-color 0.6s ease;
 }
 
 .mrn-c-order-button a:hover {
-    background-color: #b58926;
+    background-color: var(--mrn-dark-yellow-main);
     text-decoration: none;
 }
 
