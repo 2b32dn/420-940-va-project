@@ -34,10 +34,10 @@
           <h1 data-i18n="main.hero.title">
             Savor Authentic Filipino Flavors
           </h1>
-          <p>
+          <p data-i18n="main.hero.paragraph">
             From sizzling sisig to soulful sinigang — every dish is a celebration.
           </p>
-          <a href="./menu.html#combo" class="mrn-c-hero-btn">View Menu</a>
+          <a href="./menu.html#combo" class="mrn-c-hero-btn" data-i18n="main.menu.button">View Menu</a>
         </div>
       </section>
 
@@ -46,7 +46,7 @@
         <div class="mrn-l-container text-center px-4 px-md-5">
           <div class="mrn-c-quote-highlight text-center">
             <blockquote class="blockquote mb-4">
-              <p class="fs-4 fst-italic mb-3">
+              <p class="fs-4 fst-italic mb-3" data-i18n="main.bibleverse.paragraph">
                 For I know the plans I have for you, declares the LORD, plans
                 to prosper you and not harm you, plans to give you hope and a
                 future.
@@ -70,8 +70,8 @@
               <div class="mrn-c-menu-card card h-100 shadow-sm">
                 <img src="./img/menu/menu-set-r.jpg" class="card-img-top" alt="Pancit with Fried Chicken and Pork BBQ Skewer">
                 <div class="card-body">
-                  <h5 class="card-title">Pancit with Fried Chicken and Pork BBQ Skewer</h5>
-                  <p class="card-text">Stir-fried noodles loaded with vegetables, topped with crispy golden fried
+                  <h5 class="card-title" data-i18n = "main.menu.item.card.title">Pancit with Fried Chicken and Pork BBQ Skewer</h5>
+                  <p class="card-text" data-i18n = "main.menu.item.card.text1">Stir-fried noodles loaded with vegetables, topped with crispy golden fried
                     chicken,
                     and paired with a smoky pork BBQ skewer glazed in sweet-savory sauce.
                     A comforting classic that brings the party to your table.</p>
@@ -85,7 +85,7 @@
                 <img src="./img/menu/tapsilog.jpg" class="card-img-top" alt="Tapsilog">
                 <div class="card-body">
                   <h5 class="card-title">Tapsilog</h5>
-                  <p class="card-text">Tender slices of marinated beef tapa, pan-fried to savory perfection,
+                  <p class="card-text" data-i18n = "main.menu.item.card.text2">Tender slices of marinated beef tapa, pan-fried to savory perfection,
                     paired with fragrant garlic fried rice and a sunny-side-up egg.
                     Served with a side of vinegar dip for that classic tangy kick.</p>
                 </div>
@@ -98,20 +98,20 @@
                 <img src="./img/menu/lechon-kawali.jpg" class="card-img-top" alt="Lechon Kawali">
                 <div class="card-body">
                   <h5 class="card-title">Lechon Kawali</h5>
-                  <p class="card-text">Golden-fried pork belly with crackling skin and juicy, flavorful meat inside.
+                  <p class="card-text" data-i18n = "main.menu.item.card.text3">Golden-fried pork belly with crackling skin and juicy, flavorful meat inside.
                     Each bite delivers a satisfying crunch, balanced by our signature liver sauce and
                     a side of pickled papaya for a burst of brightness.</p>
                 </div>
               </div>
             </div>
           </div>
-          <a href="./menu.html#combo" class="mrn-c-button btn mt-4">See Full Menu</a>
+          <a href="./menu.html#combo" class="mrn-c-button btn mt-4" data-i18n = "main.fullmenu.button">See Full Menu</a>
         </div>
 
         <div class="mrn-l-container text-center px-4 px-md-5">
           <div class="mrn-c-quote-highlight text-center">
             <blockquote class="blockquote">
-              <p class="fs-4 fst-italic">
+              <p class="fs-4 fst-italic" data-i18n = "main.menu.quote.paragraph">
                 At the heart of our menu is a deep love for Filipino home cooking.
                 Each dish is inspired by the meals we grew up with — rich in flavor, cooked with care,
                 and meant to be shared. We focus on serving honest, satisfying food that brings people together and is
@@ -134,13 +134,12 @@
 
   <!-- This script handles internationalization (i18n) by dynamically loading translations based on user preferences or browser settings -->
   <script src="./js/i18n.js"></script>
-  <script src="./js/header.js"></script>
   <script>
     includeHTML().then(() => {
       initI18n();
-      initHeaderBehavior();
     });
   </script>
 </body>
 
 </html>
+
