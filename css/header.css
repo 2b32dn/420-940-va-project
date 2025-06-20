@@ -10,10 +10,17 @@
 }
 
 .mrn-c-nav__link {
+  /* margin: 0 1rem; */
   color: black;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media (min-width: 1440px) {
+  .mrn-c-nav__link {
+    margin: 0 0.5rem;
+  }
 }
 
 /* ================================================
@@ -26,6 +33,7 @@
 }
 
 .mrn-c-nav__language-select {
+  color: #000000;
   font-weight: 700;
   text-transform: uppercase;
   &,
