@@ -1,5 +1,5 @@
 function showMenuSectionFromHash() {
-	const hash = window.location.hash.substring(1);
+	const hash = window.location.hash.substring(1) || "combo";
 	const sections = document.querySelectorAll(".mrn-c-menu-section");
 
 	sections.forEach((section) => {
