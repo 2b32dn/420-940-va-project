@@ -21,6 +21,10 @@
     font-family: 'Lora', serif;
 }
 
+.mrn-l-contact-subtext{
+    margin-bottom: 2.6rem;
+}
+
 /* Email Link */
 .mrn-c-contact-section a:hover {
     text-decoration: underline;
@@ -57,3 +61,5 @@
         justify-content: center;
     }
 }
+
+
