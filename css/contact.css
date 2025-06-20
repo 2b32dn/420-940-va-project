@@ -52,7 +52,6 @@
 }
 @media (max-width: 768px) {
     .mrn-l-contact-icons {
-        display:flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
