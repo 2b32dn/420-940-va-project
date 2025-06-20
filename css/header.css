@@ -10,7 +10,6 @@
 }
 
 .mrn-c-nav__link {
-  /* margin: 0 1rem; */
   color: black;
   font-weight: 700;
   text-transform: uppercase;
@@ -71,7 +70,6 @@
 .mrn-c-nav {
   position: relative;
   background-color: var(--mrn-yellow-main);
-  height: 15vh;
   width: 100%;
 }
 
@@ -86,6 +84,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    height: 125px;
     grid-template-columns: 1fr 130px 1fr;
   }
 }
@@ -177,7 +176,7 @@
   flex-direction: column;
   position: absolute;
   width: 100%;
-  top: 110px;
+  top: 100px;
   padding: 1rem;
   background-color: var(--mrn-brown-main);
 }
