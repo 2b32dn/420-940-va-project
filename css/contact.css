@@ -11,7 +11,6 @@
 .mrn-c-contact-section h5 {
     font-weight: 500;
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
     color: black;
 }
 
@@ -42,6 +41,7 @@
 /* Contact Icons */
 .mrn-l-contact-icons{
     display:flex;
+    align-items: center;
 }
 
 /* Contact info center */
