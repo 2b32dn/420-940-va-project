@@ -22,6 +22,7 @@
 
   /* SVG Color Filter */
   --mrn-yellow-main-svg: brightness(0) saturate(100%) invert(66%) sepia(18%) saturate(1844%) hue-rotate(3deg) brightness(97%) contrast(75%);
+  --mrn-brown-main-svg: brightness(0) saturate(100%) invert(12%) sepia(31%) saturate(4335%) hue-rotate(345deg) brightness(97%) contrast(96%);
 
   /* Responsive Breakpoints */
   --sm: 540px;
@@ -159,13 +160,12 @@ hr {
    Utility Classes
    ================================================ */
 /* hr line */
-.mrn-c-hr-generic{
+.mrn-c-hr-generic {
   background-color: var(--mrn-yellow-main);
   height: 3px;
   border: none;
   margin: 0;
   opacity: 1;
-
 }
 .mrn-c-hr {
   height: 3px;
@@ -196,5 +196,3 @@ hr {
   opacity: 1;
   transform: translateY(0);
 }
-
-

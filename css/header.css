@@ -243,6 +243,7 @@
   background: url("../img/hamburger.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(37%) saturate(1789%) hue-rotate(344deg) brightness(85%) contrast(108%);
 }
 
 /* .mrn-c--nav__btn--hamburger.cv-nav__btn--hamburger-close {
