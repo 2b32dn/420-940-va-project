@@ -5,6 +5,7 @@ function initHeaderBehavior() {
   if (hamburgerBtn && mobileMenu) {
     hamburgerBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("is-visible");
+      hamburgerBtn.classList.toggle("is-close")
     });
   }
 }
