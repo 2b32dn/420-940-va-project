@@ -254,11 +254,12 @@
   filter: brightness(0) saturate(100%) invert(0%) sepia(37%) saturate(1789%) hue-rotate(344deg) brightness(85%) contrast(108%);
 }
 
-/* .mrn-c--nav__btn--hamburger.cv-nav__btn--hamburger-close {
+.mrn-c--nav__btn--hamburger.is-close {
   background: url("../img/close.svg");
   background-size: contain;
   background-repeat: no-repeat;
-} */
+  filter: brightness(0) saturate(100%) invert(0%) sepia(37%) saturate(1789%) hue-rotate(344deg) brightness(85%) contrast(108%);
+}
 
 .mrn-c-nav__section.mrn-c-nav__section--right.mrn-c-nav__section--right-mobile {
   display: none;
@@ -272,4 +273,14 @@
 
 .mrn-c-nav__section.mrn-c-nav__section--right.mrn-c-nav__section--right-mobile.is-visible {
   display: block;
+}
+
+.mrn-c-nav__section.mrn-c-nav__section--right.mrn-c-nav__section--right-mobile.is-visible li {
+  padding: 1rem;
+}
+
+.mrn-c-nav__section.mrn-c-nav__section--right.mrn-c-nav__section--right-mobile.is-visible .mrn-c-nav__item a {
+  color: var(--mrn-yellow-main);
+  font-size: 1rem;
+  font-weight: 500;
 }
