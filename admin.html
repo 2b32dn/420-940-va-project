@@ -35,13 +35,18 @@
       <div class="col-md-2">
         <input type="text" name="title" id="titleInput" class="form-control" placeholder="Title" required />
       </div>
-
-      <div class="col-md-2"><input type="text" name="description" class="form-control" placeholder="Description" /></div>
-      <div class="col-md-2"><input type="text" name="price" class="form-control" placeholder="Price" required /></div>
+      <div class="col-md-2">
+        <input type="text" name="description" class="form-control" placeholder="Description" />
+      </div>
+      <div class="col-md-2">
+        <input type="text" name="price" class="form-control" placeholder="Price" required />
+      </div>
       <div class="col-md-3">
         <input type="text" name="code" id="codeInput" class="form-control" placeholder="Code" required />
       </div>
-      <div class="col-md-1 d-grid"><button class="btn btn-primary">Add</button></div>
+      <div class="col-md-1 d-grid">
+        <button class="btn btn-primary">Add</button>
+      </div>
     </form>
 
     <table class="table table-bordered" id="menuTable">
@@ -63,16 +68,14 @@
     async function loadMenu() {
       try {
         const category = document.getElementById("categoryFilter").value;
-        const response = await fetch(`${window.location.origin}/api/menu/${category}`);
-        if (!response.ok) throw new Error("Network response was not ok");
-
+        const response = await fetch(`/api/menu/${category}`);
+        if (!response.ok) throw new Error("Failed to fetch menu");
         const allMenuItems = await response.json();
         const tableBody = document.querySelector("#menuTable tbody");
         tableBody.innerHTML = "";
 
         allMenuItems.forEach((item) => {
           const row = document.createElement("tr");
-
           row.innerHTML = `
             <td><input class="form-control" value="${item.lang_code}" /></td>
             <td><input class="form-control" value="${item.title}" /></td>
@@ -82,13 +85,11 @@
             <td>
               <button class="btn btn-success btn-sm" onclick="updateItem(this)">Update</button>
               <button class="btn btn-danger btn-sm" onclick="deleteItem('${item.code}')">Delete</button>
-            </td>
-          `;
-
+            </td>`;
           tableBody.appendChild(row);
         });
-      } catch (error) {
-        console.error("Error fetching menu:", error);
+      } catch (err) {
+        console.error("Error loading menu:", err);
       }
     }
 
@@ -102,56 +103,67 @@
         const price = inputs[3].value.trim();
         const code = inputs[4].value.trim();
 
-        const response = await fetch(`${window.location.origin}/api/menu/${encodeURIComponent(code)}/${lang}`, {
+        const response = await fetch(`/api/menu/${encodeURIComponent(code)}/${lang}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ title, description: desc, price }),
         });
 
         if (!response.ok) {
-          const errorText = await response.text();
-          throw new Error(`Server responded with ${response.status}: ${errorText}`);
+          const msg = await response.text();
+          throw new Error(msg || `HTTP ${response.status}`);
         }
 
-        alert("Updated!");
+        alert("Updated successfully!");
       } catch (err) {
         console.error("Update failed:", err);
         alert(`Update failed: ${err.message}`);
       }
     }
 
-
     async function deleteItem(code) {
-      await fetch(`${window.location.origin}/api/menu/${code}`, { method: "DELETE" });
-      loadMenu();
+      try {
+        const response = await fetch(`/api/menu/${encodeURIComponent(code)}`, { method: "DELETE" });
+        if (!response.ok) throw new Error("Delete failed");
+        loadMenu();
+      } catch (err) {
+        console.error("Delete failed:", err);
+        alert(`Delete failed: ${err.message}`);
+      }
     }
 
     document.getElementById("addItemForm").addEventListener("submit", async (e) => {
       e.preventDefault();
       const form = e.target;
       const data = Object.fromEntries(new FormData(form));
-      await fetch(`${window.location.origin}/api/menu`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      form.reset();
-      loadMenu();
+      try {
+        const response = await fetch(`/api/menu`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+          const msg = await response.text();
+          throw new Error(msg || `HTTP ${response.status}`);
+        }
+        form.reset();
+        loadMenu();
+      } catch (err) {
+        console.error("Add failed:", err);
+        alert(`Add failed: ${err.message}`);
+      }
     });
 
     document.getElementById("categoryFilter").addEventListener("change", loadMenu);
 
-    loadMenu();
-
-    // Automatically update code input when title changes
     document.getElementById("titleInput").addEventListener("input", () => {
       const rawTitle = document.getElementById("titleInput").value.trim();
       const category = document.getElementById("categoryFilter").value;
 
       const slug = rawTitle
         .toLowerCase()
-        .replace(/[^a-z0-9]+/g, ".")   // convert spaces/specials to dots
-        .replace(/^\.|\.$/g, "");      // remove leading/trailing dots
+        .replace(/[^a-z0-9]+/g, ".")
+        .replace(/^\.|\.$/g, "");
 
       const prefixMap = {
         combo: "menu.combo",
@@ -162,11 +174,10 @@
       };
 
       const prefix = prefixMap[category] || "menu.unknown";
-
-      const fullCode = `${prefix}.${slug}.title`;
-      document.getElementById("codeInput").value = fullCode;
+      document.getElementById("codeInput").value = `${prefix}.${slug}.title`;
     });
 
+    loadMenu();
   </script>
 </body>
 
