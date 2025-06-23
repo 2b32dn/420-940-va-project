@@ -132,7 +132,8 @@ app.post("/api/menu", async (req, res) => {
 });
 
 app.put("/api/menu/:code/:lang_code", async (req, res) => {
-	const { code, lang_code } = req.params;
+	const code = decodeURIComponent(req.params.code); // 🔥 decode it safely
+	const lang_code = req.params.lang_code;
 	const { title, description, price } = req.body;
 
 	try {
@@ -140,6 +141,7 @@ app.put("/api/menu/:code/:lang_code", async (req, res) => {
 		if (item.rows.length === 0) return res.status(404).send("Item not found");
 
 		const item_id = item.rows[0].id;
+
 		await pool.query(
 			`INSERT INTO menu_descriptions (item_id, lang_code, title, description)
        VALUES ($1, $2, $3, $4)
@@ -147,7 +149,9 @@ app.put("/api/menu/:code/:lang_code", async (req, res) => {
        DO UPDATE SET title = EXCLUDED.title, description = EXCLUDED.description`,
 			[item_id, lang_code, title, description]
 		);
+
 		await pool.query(`UPDATE menu_prices SET price = $1 WHERE item_id = $2`, [price, item_id]);
+
 		res.json({ message: "Item updated successfully" });
 	} catch (err) {
 		console.error(err);
