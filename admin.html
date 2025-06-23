@@ -100,7 +100,7 @@
       const desc = inputs[2].value.trim();
       const price = inputs[3].value.trim();
       const code = inputs[4].value.trim();
-      await fetch(`${window.location.origin}/api/menu/${code}/${lang}`, {
+      await fetch(`${window.location.origin}/api/menu/${encodeURIComponent(code)}/${lang}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, description: desc, price }),
