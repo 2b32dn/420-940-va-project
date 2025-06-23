@@ -43,7 +43,7 @@ app.get("/api/menu", async (req, res) => {
 	}
 });
 
-app.get("api/menu/:category", async (req, res) => {
+app.get("/api/menu/:category", async (req, res) => {
 	const categoryMap = {
 		combo: "Combo",
 		main: "Main Dishes",
@@ -76,7 +76,7 @@ app.get("api/menu/:category", async (req, res) => {
 	}
 });
 
-app.post("api/menu", async (req, res) => {
+app.post("/api/menu", async (req, res) => {
 	const { lang_code, title, description, price, code } = req.body;
 	try {
 		// Extract category name from code (e.g., "main" from "menu.main.chicken.adobo.title")
@@ -131,7 +131,7 @@ app.post("api/menu", async (req, res) => {
 	}
 });
 
-app.put("api/menu/:code/:lang_code", async (req, res) => {
+app.put("/api/menu/:code/:lang_code", async (req, res) => {
 	const { code, lang_code } = req.params;
 	const { title, description, price } = req.body;
 
@@ -155,7 +155,7 @@ app.put("api/menu/:code/:lang_code", async (req, res) => {
 	}
 });
 
-app.delete("api/menu/:code", async (req, res) => {
+app.delete("/api/menu/:code", async (req, res) => {
 	const { code } = req.params;
 	try {
 		const item = await pool.query(`SELECT id FROM menu_items WHERE code = $1`, [code]);
