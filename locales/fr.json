@@ -9,9 +9,9 @@
   "main.menu.button": "Afficher le menu",
   "main.bibleverse.paragraph": "Car je connais les plans que j'ai pour vous, déclare le Seigneur, prévoit de vous prospérer et de ne pas vous faire du mal, prévoit de vous donner de l'espoir et un avenir.",
   "main.menu.item.card.title": "Pancit avec poulet frit et brochette de barbecue de porc",
-  "main.menu.item.card.text1":"Des nouilles sautées chargées de légumes, garnies de poulet frit doré croustillant et associée à une brochette de barbecue de porc fumée glacée dans une sauce sucrée. Un classique réconfortant qui amène la fête à votre table.",
-  "main.menu.item.card.text2":"Des tranches tendres de tapa de bœuf mariné, poêlée à la perfection salée, associée à du riz frit à l'ail parfumé et à un œuf ensoleillé. Servi avec un côté de la trempette au vinaigre pour ce coup de pied acidulé classique.",
-  "main.menu.item.card.text3":"Panneau de porc gornite avec une peau crépitante et une viande juteuse et savoureuse à l'intérieur. Chaque bouchée offre un croquant satisfaisant, équilibré par notre sauce hépatique signature et un côté de papaye marinée pour une explosion de luminosité.",
+  "main.menu.item.card.text1": "Des nouilles sautées chargées de légumes, garnies de poulet frit doré croustillant et associée à une brochette de barbecue de porc fumée glacée dans une sauce sucrée. Un classique réconfortant qui amène la fête à votre table.",
+  "main.menu.item.card.text2": "Des tranches tendres de tapa de bœuf mariné, poêlée à la perfection salée, associée à du riz frit à l'ail parfumé et à un œuf ensoleillé. Servi avec un côté de la trempette au vinaigre pour ce coup de pied acidulé classique.",
+  "main.menu.item.card.text3": "Panneau de porc gornite avec une peau crépitante et une viande juteuse et savoureuse à l'intérieur. Chaque bouchée offre un croquant satisfaisant, équilibré par notre sauce hépatique signature et un côté de papaye marinée pour une explosion de luminosité.",
   "main.fullmenu.button": "Voir le menu complet",
   "main.menu.quote.paragraph": "Au cœur de notre menu se trouve un amour profond pour la cuisine familiale philippine. Chaque plat s'inspire des repas de notre enfance : riche en saveurs, cuisiné avec soin et conçu pour être partagé. Nous nous efforçons de servir une cuisine authentique et satisfaisante, rassembleuse et durable.",
   "home.title": "Bienvenue sur notre site web !",
@@ -171,6 +171,6 @@
   "footer.opening.saturday": "Samedi : 7h00 à 20h00",
   "footer.opening.sunday": "Dimanche : 7h00 à 20h00",
   "footer.location": "Emplacement",
-  "footer.address": "6459 avenue Victoria Montréal, QC, H3W 2S9",
+  "footer.address": "6410 avenue Victoria Montréal, QC, H3W 2S9",
   "footer.restaurant.name": "Morena Restaurant & Catering Services"
 }
